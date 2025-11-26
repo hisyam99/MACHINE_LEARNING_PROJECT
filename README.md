@@ -42,9 +42,17 @@ Proyek ini melakukan komparasi mendalam antara pendekatan **Machine Learning Kla
 
 ### Tujuan Penelitian
 
-- Membandingkan efektivitas pendekatan klasik (HOG + SVM) vs Deep Learning (CNN + LoRA)
+- Membandingkan efektivitas pendekatan klasik (HOG + SVM) vs Deep Learning (CNN, Transfer Learning, ViT + LoRA)
 - Mengevaluasi trade-off antara akurasi dan efisiensi komputasi pada dataset terbatas
 - Mengembangkan model lightweight yang cocok untuk deployment di perangkat mobile/edge
+- Mengevaluasi dampak data augmentation dan transfer learning pada performa model
+
+### Hasil Utama
+
+- **Model Terbaik:** HuggingFace ViT Pretrained mencapai **91.65% akurasi** dan **0.9017 Macro F1**
+- **Transfer Learning unggul:** DenseNet121 + LoRA (82.04%) dan HF ViT (91.65%) mengungguli model from scratch
+- **Data Augmentation penting:** Meningkatkan Custom CNN dari 71.74% menjadi 81.35% akurasi
+- **SVM masih relevan:** 86.27% akurasi sebagai baseline kuat tanpa GPU training
 
 ---
 
@@ -183,40 +191,70 @@ Pipeline preprocessing yang diterapkan pada semua citra:
 
 ### Perbandingan Performa pada Test Set
 
-| Model | Akurasi | Macro F1 | Precision | Recall | Catatan |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **SVM (RBF)** | **86.27%** | **0.843** | 0.860 | 0.832 | Best overall, stabil |
-| **kNN (k=5)** | 77.57% | 0.739 | 0.784 | 0.723 | Rentan high dimensionality |
-| **Random Forest** | 76.09% | 0.719 | 0.807 | 0.697 | Struggles dengan non-linear kompleks |
-| **Custom CNN + LoRA (No Aug)** | 71.05% | - | - | - | Recall COVID-19: 95% (high sensitivity) |
-| **Custom CNN + LoRA (With Aug)** | - | - | - | - | Improved generalization |
-| **DenseNet121 + LoRA** | - | - | - | - | Transfer learning baseline |
-| **ViT Manual** | - | - | - | - | Vision Transformer from scratch |
-| **ViT Pretrained (HF)** | - | - | - | - | HuggingFace pretrained |
+#### Machine Learning Klasik
+
+| Model | Akurasi | Macro F1 | Catatan |
+| :--- | :---: | :---: | :--- |
+| **SVM (RBF)** | **86.27%** | **0.843** | Best overall, stabil, presisi tinggi |
+| **kNN (k=5)** | 77.57% | 0.739 | Rentan high dimensionality |
+| **Random Forest** | 76.09% | 0.719 | Struggles dengan non-linear kompleks |
+
+#### Deep Learning Models
+
+| Model | Akurasi | Macro F1 | Weighted F1 | F1 COVID-19 | F1 Non-COVID | F1 Normal |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **HF ViT Pretrained** | **91.65%** | **0.9017** | **0.9163** | **0.9601** | **0.8677** | **0.8773** |
+| **DenseNet121 + LoRA** | 82.04% | 0.8003 | 0.8187 | 0.8743 | 0.7241 | 0.8025 |
+| **Custom CNN (+Aug, LoRA Head)** | 81.35% | 0.7825 | 0.8093 | 0.8901 | 0.6601 | 0.7972 |
+| **Custom CNN (No Aug, LoRA Head)** | 71.74% | 0.6586 | 0.7024 | 0.8342 | 0.4788 | 0.6627 |
+| **ViT (Keras)** | 68.54% | 0.6645 | 0.6876 | 0.7569 | 0.5921 | 0.6446 |
 
 > **Catatan:** Hasil lengkap untuk semua model dapat dilihat pada file notebook dan visualisasi di folder `output_images/`.
 
 ### Analisis Utama
 
-#### 1. Keunggulan Machine Learning Klasik (SVM)
-- Fitur terstruktur dari HOG terbukti lebih robust untuk ukuran dataset ini
-- Akurasi tertinggi (86.27%) dengan stabilitas tinggi
+#### 1. Performa Terbaik: HuggingFace ViT Pretrained
+- **Akurasi tertinggi:** 91.65% (mengalahkan semua model termasuk SVM)
+- **Macro F1 tertinggi:** 0.9017
+- **F1 COVID-19 sangat tinggi:** 0.9601 (deteksi COVID-19 sangat akurat)
+- **Keseimbangan kelas baik:** F1 untuk semua kelas di atas 0.87
+- **Kesimpulan:** Transfer learning dengan Vision Transformer pretrained memberikan hasil terbaik
+
+#### 2. Keunggulan Machine Learning Klasik (SVM)
+- Fitur terstruktur dari HOG terbukti robust untuk ukuran dataset ini
+- Akurasi 86.27% dengan stabilitas tinggi (terbaik kedua setelah HF ViT)
 - Ukuran model relatif besar (~95 MB) namun performa optimal
+- **Masih relevan** sebagai baseline yang kuat tanpa memerlukan GPU training
 
-#### 2. Sensitivitas vs Spesifisitas (CNN + LoRA)
-- **Sensitivitas Tinggi:** Recall COVID-19 mencapai 95%
-- **False Positive Tinggi:** Banyak kasus Normal/Non-COVID diprediksi sebagai COVID-19
-- **Cocok untuk Screening:** Model sangat waspada, cocok untuk tahap screening awal
+#### 3. Dampak Data Augmentation pada Custom CNN
+- **Tanpa Augmentation:** Akurasi 71.74%, Macro F1 0.6586
+- **Dengan Augmentation:** Akurasi 81.35%, Macro F1 0.7825
+- **Peningkatan signifikan:** +9.61% akurasi, +0.1239 Macro F1
+- **F1 Non-COVID meningkat drastis:** 0.4788 → 0.6601 (peningkatan 37.8%)
+- **Kesimpulan:** Data augmentation sangat penting untuk model kecil dari scratch
 
-#### 3. Efisiensi vs Akurasi
-- **SVM:** Akurasi tinggi (86%) namun ukuran besar (95 MB)
-- **CNN + LoRA:** Akurasi lebih rendah (71%) namun sangat lightweight (1.8 MB)
-- **Trade-off:** Pilih berdasarkan use case (akurasi vs deployment)
+#### 4. Transfer Learning vs From Scratch
+- **DenseNet121 + LoRA:** 82.04% akurasi (transfer learning)
+- **Custom CNN + Aug:** 81.35% akurasi (from scratch)
+- **ViT Keras (from scratch):** 68.54% akurasi (terendah)
+- **Kesimpulan:** Transfer learning memberikan keunggulan signifikan, terutama dengan pretrained weights yang baik
 
-#### 4. Kesalahan Umum
-- Mayoritas model kesulitan membedakan **Non-COVID vs COVID-19**
+#### 5. Analisis Per Kelas
+- **F1 COVID-19:** Semua model deep learning mencapai >0.75, dengan HF ViT mencapai 0.9601
+- **F1 Non-COVID:** Kelas paling sulit, hanya HF ViT dan DenseNet121 yang mencapai >0.70
+- **F1 Normal:** Performa relatif baik untuk semua model (>0.64)
+- **Kesimpulan:** Non-COVID pneumonia adalah kelas paling challenging untuk dibedakan
+
+#### 6. Efisiensi vs Akurasi
+- **HF ViT Pretrained:** Akurasi tertinggi (91.65%) namun memerlukan resources lebih besar
+- **DenseNet121 + LoRA:** Keseimbangan baik (82.04%) dengan efisiensi parameter melalui LoRA
+- **Custom CNN + LoRA:** Sangat lightweight (~1.8 MB) dengan performa 81.35% (dengan augmentation)
+- **Trade-off:** Pilih berdasarkan use case (akurasi maksimal vs deployment mobile/edge)
+
+#### 7. Kesalahan Umum
+- Mayoritas model kesulitan membedakan **Non-COVID vs COVID-19** (terlihat dari F1 Non-COVID yang lebih rendah)
 - Artefak klinis (kabel, selang) sering disalahartikan sebagai lesi paru
-- Fine-grained features sulit ditangkap oleh model kecil
+- Model from scratch (tanpa transfer learning) memerlukan data augmentation untuk performa optimal
 
 ---
 
@@ -295,23 +333,39 @@ Folder `output_images/` berisi berbagai visualisasi hasil eksperimen:
 
 ### Temuan Utama
 
-1. **Machine Learning Klasik (SVM) tetap unggul** untuk dataset terbatas ini dengan akurasi 86.27%
-2. **Custom CNN + LoRA menunjukkan potensi besar** sebagai model lightweight (1.8 MB) dengan sensitivitas tinggi (95% recall COVID-19)
-3. **Trade-off Akurasi vs Efisiensi:**
-   - SVM: Akurasi tinggi, ukuran besar
-   - CNN+LoRA: Akurasi lebih rendah, sangat ringan
-4. **False Positive masih menjadi tantangan** untuk model CNN kecil dalam membedakan Non-COVID Pneumonia dari Normal
+1. **HuggingFace ViT Pretrained adalah model terbaik** dengan akurasi 91.65% dan Macro F1 0.9017, mengungguli semua model termasuk SVM klasik
+2. **Transfer Learning memberikan keunggulan signifikan:**
+   - HF ViT Pretrained: 91.65% akurasi
+   - DenseNet121 + LoRA: 82.04% akurasi
+   - Keduanya mengungguli model from scratch
+3. **Data Augmentation sangat penting** untuk model from scratch:
+   - Custom CNN tanpa augmentation: 71.74% akurasi
+   - Custom CNN dengan augmentation: 81.35% akurasi (+9.61%)
+4. **Machine Learning Klasik (SVM) masih relevan** sebagai baseline yang kuat dengan akurasi 86.27% tanpa memerlukan GPU training
+5. **Non-COVID Pneumonia adalah kelas paling challenging:**
+   - F1 Non-COVID lebih rendah dibandingkan kelas lain di sebagian besar model
+   - Hanya HF ViT dan DenseNet121 yang mencapai F1 >0.70 untuk kelas ini
+6. **Trade-off Akurasi vs Efisiensi:**
+   - HF ViT: Akurasi tertinggi (91.65%) namun memerlukan resources lebih besar
+   - DenseNet121 + LoRA: Keseimbangan baik (82.04%) dengan efisiensi parameter
+   - Custom CNN + LoRA: Sangat ringan (~1.8 MB) dengan performa 81.35% (dengan augmentation)
 
 ### Rekomendasi
 
-- **Untuk Akurasi Maksimal:** Gunakan SVM dengan HOG features
-- **Untuk Deployment Mobile/Edge:** Gunakan Custom CNN + LoRA dengan optimasi lebih lanjut
-- **Untuk Generalisasi Lebih Baik:** Pertimbangkan Transfer Learning dengan data augmentation
-- **Future Work:** 
-  - Eksperimen dengan dataset lebih besar
-  - Fine-tuning hyperparameter LoRA
-  - Ensemble methods
-  - Attention mechanisms untuk mengurangi false positive
+- **Untuk Akurasi Maksimal:** Gunakan **HuggingFace ViT Pretrained** (91.65% akurasi)
+- **Untuk Keseimbangan Performa-Efisiensi:** Gunakan **DenseNet121 + LoRA** (82.04% akurasi)
+- **Untuk Deployment Mobile/Edge:** Gunakan **Custom CNN + LoRA dengan Augmentation** (81.35% akurasi, ~1.8 MB)
+- **Untuk Baseline Tanpa GPU:** Gunakan **SVM dengan HOG features** (86.27% akurasi)
+- **Untuk Model From Scratch:** **Selalu gunakan data augmentation** untuk performa optimal
+
+### Future Work
+
+- Eksperimen dengan dataset lebih besar untuk validasi generalisasi
+- Fine-tuning hyperparameter LoRA untuk optimasi lebih lanjut
+- Ensemble methods menggabungkan multiple models
+- Attention mechanisms untuk mengurangi false positive pada kelas Non-COVID
+- Eksperimen dengan arsitektur transformer lainnya (Swin Transformer, ConvNeXt)
+- Optimasi model untuk deployment edge devices (quantization, pruning)
 
 ---
 
