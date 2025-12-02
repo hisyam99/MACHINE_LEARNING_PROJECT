@@ -46,12 +46,12 @@ site/
 Thumbs.db
 
 # Artifacts
-artifacts/
-*.h5
-*.pkl
-*.pth
-*.pt
-*.ckpt
+#artifacts/
+#*.h5
+#*.pkl
+#*.pth
+#*.pt
+#*.ckpt
 
 # Logs
 logs/
