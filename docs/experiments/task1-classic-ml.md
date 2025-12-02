@@ -162,6 +162,6 @@ Lihat visualisasi lengkap di:
 
 ## 🔗 Referensi
 
-- [Notebook: TASK_1:PREPROCESS+FEATEXTRACT+CLASSICMODEL.ipynb](../../TASK_1:PREPROCESS+FEATEXTRACT+CLASSICMODEL.ipynb)
+- [Notebook: TASK_1:PREPROCESS+FEATEXTRACT+CLASSICMODEL.ipynb](https://github.com/hisyam99/MACHINE_LEARNING/blob/main/TASK_1:PREPROCESS+FEATEXTRACT+CLASSICMODEL.ipynb)
 - [HOG Feature Descriptor](../methodology/classic-ml.md#1-hog-histogram-of-oriented-gradients)
 

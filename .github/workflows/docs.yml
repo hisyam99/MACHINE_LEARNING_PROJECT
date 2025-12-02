@@ -50,6 +50,16 @@ jobs:
         with:
           enablement: true
 
+      - name: Copy images to docs
+        run: |
+          if [ -d "output_images" ] && [ "$(ls -A output_images 2>/dev/null)" ]; then
+            mkdir -p docs/output_images
+            cp -r output_images/* docs/output_images/
+            echo "Images copied successfully"
+          else
+            echo "No output_images directory found, skipping image copy"
+          fi
+
       - name: Build documentation
         run: mkdocs build --strict
 

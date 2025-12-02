@@ -210,7 +210,7 @@ Lihat visualisasi lengkap di:
 
 ## 🔗 Referensi
 
-- [Notebook: TASK_3:PretrainedDenseNet+ViT+Augmentation+LoRA.ipynb](../../TASK_3:PretrainedDenseNet+ViT+Augmentation+LoRA.ipynb)
+- [Notebook: TASK_3:PretrainedDenseNet+ViT+Augmentation+LoRA.ipynb](https://github.com/hisyam99/MACHINE_LEARNING/blob/main/TASK_3:PretrainedDenseNet+ViT+Augmentation+LoRA.ipynb)
 - [Transfer Learning](../methodology/transfer-learning.md)
 - [LoRA Implementation](../methodology/lora.md)
 

@@ -196,7 +196,7 @@ Lihat visualisasi lengkap di:
 
 ## 🔗 Referensi
 
-- [Notebook: TASK_2:CNN+LoRA.ipynb](../../TASK_2:CNN+LoRA.ipynb)
+- [Notebook: TASK_2:CNN+LoRA.ipynb](https://github.com/hisyam99/MACHINE_LEARNING/blob/main/TASK_2:CNN+LoRA.ipynb)
 - [Custom CNN Architecture](../methodology/custom-cnn.md)
 - [LoRA Implementation](../methodology/lora.md)
 

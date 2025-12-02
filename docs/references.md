@@ -85,24 +85,24 @@ Link: https://ieeexplore.ieee.org/document/1467360
 
 ### Dataset Documentation
 
-- [COVID-QU-Ex Dataset README](../dataset/introduction.md)
-- [Dataset Statistics](../dataset/statistics.md)
-- [Dataset Citation](../dataset/citation.md)
+- [COVID-QU-Ex Dataset README](dataset/introduction.md)
+- [Dataset Statistics](dataset/statistics.md)
+- [Dataset Citation](dataset/citation.md)
 
 ### Methodology Documentation
 
-- [Preprocessing](../methodology/preprocessing.md)
-- [Classic ML](../methodology/classic-ml.md)
-- [Custom CNN](../methodology/custom-cnn.md)
-- [Transfer Learning](../methodology/transfer-learning.md)
-- [LoRA](../methodology/lora.md)
+- [Preprocessing](methodology/preprocessing.md)
+- [Classic ML](methodology/classic-ml.md)
+- [Custom CNN](methodology/custom-cnn.md)
+- [Transfer Learning](methodology/transfer-learning.md)
+- [LoRA](methodology/lora.md)
 
 ### Results Documentation
 
-- [Results Overview](../results/overview.md)
-- [Model Comparison](../results/comparison.md)
-- [Detailed Analysis](../results/analysis.md)
-- [Visualizations](../results/visualizations.md)
+- [Results Overview](results/overview.md)
+- [Model Comparison](results/comparison.md)
+- [Detailed Analysis](results/analysis.md)
+- [Visualizations](results/visualizations.md)
 
 ## 🔗 External Links
 
