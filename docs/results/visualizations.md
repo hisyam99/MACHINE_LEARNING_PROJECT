@@ -4,7 +4,7 @@
 
 ### Custom CNN + LoRA (No Augmentation)
 
-![Training Curves - Custom CNN No Aug](output_images/acc_loss_custom_cnn_lora_no_augmentation.png)
+![Training Curves - Custom CNN No Aug](../output_images/acc_loss_custom_cnn_lora_no_augmentation.png)
 
 **Observasi:**
 - Overfitting mulai terjadi di Epoch 8
@@ -13,7 +13,7 @@
 
 ### Custom CNN + LoRA (With Augmentation)
 
-![Training Curves - Custom CNN With Aug](output_images/acc_loss_custom_cnn_lora_with_augmentation.png)
+![Training Curves - Custom CNN With Aug](../output_images/acc_loss_custom_cnn_lora_with_augmentation.png)
 
 **Observasi:**
 - Training lebih stabil
@@ -22,7 +22,7 @@
 
 ### DenseNet121 + LoRA
 
-![Training Curves - DenseNet121](output_images/acc_loss_densenet121_lora.png)
+![Training Curves - DenseNet121](../output_images/acc_loss_densenet121_lora.png)
 
 **Observasi:**
 - Konvergensi cepat
@@ -31,7 +31,7 @@
 
 ### Vision Transformer (Manual)
 
-![Training Curves - ViT Manual](output_images/acc_loss_VisionTransformer_manual.png)
+![Training Curves - ViT Manual](../output_images/acc_loss_VisionTransformer_manual.png)
 
 **Observasi:**
 - Training lebih lambat
@@ -40,7 +40,7 @@
 
 ### HuggingFace ViT Pretrained
 
-![Training Curves - HF ViT](output_images/acc_loss_HF_VisionTransformer_Pretrained.png)
+![Training Curves - HF ViT](../output_images/acc_loss_HF_VisionTransformer_Pretrained.png)
 
 **Observasi:**
 - Konvergensi sangat cepat
@@ -51,7 +51,7 @@
 
 ### Accuracy per Model
 
-![Benchmark Accuracy](output_images/benchmark_accuracy_per_model.png)
+![Benchmark Accuracy](../output_images/benchmark_accuracy_per_model.png)
 
 **Highlights:**
 - HF ViT Pretrained: 91.65% (tertinggi)
@@ -60,7 +60,7 @@
 
 ### Macro F1 per Model
 
-![Benchmark Macro F1](output_images/benchmark_macro_f1_per_model.png)
+![Benchmark Macro F1](../output_images/benchmark_macro_f1_per_model.png)
 
 **Highlights:**
 - HF ViT Pretrained: 0.9017 (tertinggi)
@@ -69,7 +69,7 @@
 
 ### Accuracy vs Macro F1
 
-![Accuracy vs Macro F1](output_images/accuracy_vs_macro_f1_per_model.png)
+![Accuracy vs Macro F1](../output_images/accuracy_vs_macro_f1_per_model.png)
 
 **Observasi:**
 - Korelasi positif antara accuracy dan macro F1
@@ -80,7 +80,7 @@
 
 ### Per-Class F1-Score
 
-![Per-Class F1](output_images/per_class_f1_per_model.png)
+![Per-Class F1](../output_images/per_class_f1_per_model.png)
 
 **Observasi:**
 - F1 COVID-19: Semua model >0.75, HF ViT mencapai 0.9601
@@ -89,7 +89,7 @@
 
 ### Per-Class Error Rate (Recall)
 
-![Per-Class Error Rate](output_images/per_class_error_rate_per_model_recall.png)
+![Per-Class Error Rate](../output_images/per_class_error_rate_per_model_recall.png)
 
 **Observasi:**
 - COVID-19: Error rate rendah untuk semua model
@@ -100,7 +100,7 @@
 
 ### Custom CNN + LoRA (No Augmentation)
 
-![Confusion Matrix - Custom CNN No Aug](output_images/conf_matrix_custom_cnn_lora_no_augmentation.png)
+![Confusion Matrix - Custom CNN No Aug](../output_images/conf_matrix_custom_cnn_lora_no_augmentation.png)
 
 **Observasi:**
 - Banyak false positives untuk COVID-19
@@ -109,7 +109,7 @@
 
 ### Custom CNN + LoRA (With Augmentation)
 
-![Confusion Matrix - Custom CNN With Aug](output_images/conf_matrix_custom_cnn_lora_with_augmentation.png)
+![Confusion Matrix - Custom CNN With Aug](../output_images/conf_matrix_custom_cnn_lora_with_augmentation.png)
 
 **Observasi:**
 - False positives berkurang
@@ -118,7 +118,7 @@
 
 ### DenseNet121 + LoRA
 
-![Confusion Matrix - DenseNet121](output_images/conf_matrix_densenet121_lora.png)
+![Confusion Matrix - DenseNet121](../output_images/conf_matrix_densenet121_lora.png)
 
 **Observasi:**
 - Keseimbangan baik untuk semua kelas
@@ -127,7 +127,7 @@
 
 ### Vision Transformer (Manual)
 
-![Confusion Matrix - ViT Manual](output_images/conf_matrix_VisionTransformer_manual.png)
+![Confusion Matrix - ViT Manual](../output_images/conf_matrix_VisionTransformer_manual.png)
 
 **Observasi:**
 - Struggles dengan semua kelas
@@ -136,7 +136,7 @@
 
 ### HuggingFace ViT Pretrained
 
-![Confusion Matrix - HF ViT](output_images/conf_matrix_HF_VisionTransformer_Pretrained.png)
+![Confusion Matrix - HF ViT](../output_images/conf_matrix_HF_VisionTransformer_Pretrained.png)
 
 **Observasi:**
 - Keseimbangan sangat baik
@@ -147,7 +147,7 @@
 
 ### Custom CNN + LoRA (No Augmentation)
 
-![Predictions - Custom CNN No Aug](output_images/custom_cnn_lora_no_augmentation_5_predict_true_false.png)
+![Predictions - Custom CNN No Aug](../output_images/custom_cnn_lora_no_augmentation_5_predict_true_false.png)
 
 **Observasi:**
 - Prediksi benar: Confidence tinggi untuk COVID-19
@@ -156,7 +156,7 @@
 
 ### Custom CNN + LoRA (With Augmentation)
 
-![Predictions - Custom CNN With Aug](output_images/custom_cnn_lora_with_augmentation_5_predict_true_false.png)
+![Predictions - Custom CNN With Aug](../output_images/custom_cnn_lora_with_augmentation_5_predict_true_false.png)
 
 **Observasi:**
 - Prediksi benar: Confidence lebih seimbang
@@ -165,7 +165,7 @@
 
 ### DenseNet121 + LoRA
 
-![Predictions - DenseNet121](output_images/densenet121_lora_5_predict_true_false.png)
+![Predictions - DenseNet121](../output_images/densenet121_lora_5_predict_true_false.png)
 
 **Observasi:**
 - Prediksi benar: Confidence tinggi dan konsisten
@@ -174,7 +174,7 @@
 
 ### Vision Transformer (Manual)
 
-![Predictions - ViT Manual](output_images/VisionTransformer_manual_5_predict_true_false.png)
+![Predictions - ViT Manual](../output_images/VisionTransformer_manual_5_predict_true_false.png)
 
 **Observasi:**
 - Prediksi benar: Confidence bervariasi
@@ -183,7 +183,7 @@
 
 ### HuggingFace ViT Pretrained
 
-![Predictions - HF ViT](output_images/HF_VisionTransformer_Pretrained_5_predict_true_false.png)
+![Predictions - HF ViT](../output_images/HF_VisionTransformer_Pretrained_5_predict_true_false.png)
 
 **Observasi:**
 - Prediksi benar: Confidence sangat tinggi dan konsisten
@@ -192,7 +192,7 @@
 
 ## 📝 Catatan
 
-Semua visualisasi tersedia di folder `output_images/` dengan format:
+Semua visualisasi tersedia di folder `../output_images/` dengan format:
 - `acc_loss_*.png` - Training curves
 - `conf_matrix_*.png` - Confusion matrices
 - `*_5_predict_true_false.png` - Prediction visualizations

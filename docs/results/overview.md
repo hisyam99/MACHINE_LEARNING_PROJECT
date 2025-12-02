@@ -87,23 +87,23 @@
 
 ### Accuracy vs Macro F1
 
-![Accuracy vs Macro F1](output_images/accuracy_vs_macro_f1_per_model.png)
+![Accuracy vs Macro F1](../output_images/accuracy_vs_macro_f1_per_model.png)
 
 ### Benchmark Accuracy
 
-![Benchmark Accuracy](output_images/benchmark_accuracy_per_model.png)
+![Benchmark Accuracy](../output_images/benchmark_accuracy_per_model.png)
 
 ### Benchmark Macro F1
 
-![Benchmark Macro F1](output_images/benchmark_macro_f1_per_model.png)
+![Benchmark Macro F1](../output_images/benchmark_macro_f1_per_model.png)
 
 ### Per-Class F1
 
-![Per-Class F1](output_images/per_class_f1_per_model.png)
+![Per-Class F1](../output_images/per_class_f1_per_model.png)
 
 ### Per-Class Error Rate (Recall)
 
-![Per-Class Error Rate](output_images/per_class_error_rate_per_model_recall.png)
+![Per-Class Error Rate](../output_images/per_class_error_rate_per_model_recall.png)
 
 ## 💡 Key Insights
 
