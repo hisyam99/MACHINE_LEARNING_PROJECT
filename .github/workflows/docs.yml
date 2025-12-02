@@ -9,6 +9,7 @@ on:
       - 'docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/docs.yml'
+      - 'output_images/**'
   pull_request:
     branches:
       - main
@@ -16,6 +17,7 @@ on:
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
+      - 'output_images/**'
   workflow_dispatch:
 
 permissions:
@@ -52,12 +54,34 @@ jobs:
 
       - name: Copy images to docs
         run: |
+          echo "Checking for output_images directory..."
           if [ -d "output_images" ] && [ "$(ls -A output_images 2>/dev/null)" ]; then
+            echo "✅ Found output_images directory"
             mkdir -p docs/output_images
-            cp -r output_images/* docs/output_images/
-            echo "Images copied successfully"
+            cp -r output_images/* docs/output_images/ 2>&1 || true
+            echo "✅ Images copied successfully"
+            echo "Number of images: $(ls -1 docs/output_images/ 2>/dev/null | wc -l)"
+            ls -la docs/output_images/ | head -5
           else
-            echo "No output_images directory found, skipping image copy"
+            echo "⚠️ No output_images directory found in root"
+            echo "Checking if images already exist in docs/output_images..."
+            if [ -d "docs/output_images" ] && [ "$(ls -A docs/output_images 2>/dev/null | grep -v '.gitkeep')" ]; then
+              echo "✅ Images already exist in docs/output_images"
+            else
+              echo "⚠️ No images found. Documentation will build but images will be missing."
+              mkdir -p docs/output_images
+            fi
+          fi
+
+      - name: Verify images before build
+        run: |
+          echo "Verifying images in docs/output_images..."
+          if [ -d "docs/output_images" ]; then
+            IMAGE_COUNT=$(find docs/output_images -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" 2>/dev/null | wc -l)
+            echo "Found $IMAGE_COUNT image files"
+            if [ "$IMAGE_COUNT" -eq 0 ]; then
+              echo "⚠️ Warning: No images found. Build may fail in strict mode."
+            fi
           fi
 
       - name: Build documentation
