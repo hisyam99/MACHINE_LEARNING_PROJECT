@@ -1,4 +1,7 @@
-name: Deploy Documentation
+# Alternative workflow jika yang utama tidak bekerja
+# Rename file ini menjadi docs.yml jika perlu
+
+name: Deploy Documentation (Alternative)
 
 on:
   push:
@@ -8,14 +11,7 @@ on:
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
-      - '.github/workflows/docs.yml'
-  pull_request:
-    branches:
-      - main
-      - master
-    paths:
-      - 'docs/**'
-      - 'mkdocs.yml'
+      - '.github/workflows/docs*.yml'
   workflow_dispatch:
 
 permissions:
@@ -23,8 +19,12 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -40,28 +40,27 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs-material[imaging]
-          pip install mkdocs-git-revision-date-localized-plugin
-          pip install mkdocs-minify-plugin
-          pip install mkdocs-awesome-pages-plugin
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          enablement: true
+          pip install -r requirements-docs.txt
 
       - name: Build documentation
         run: mkdocs build --strict
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./site
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        environment:
-          name: github-pages
-          url: ${{ steps.deployment.outputs.page_url }}
 
