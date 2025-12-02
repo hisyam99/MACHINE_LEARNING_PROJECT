@@ -2,11 +2,13 @@
 
 <div align="center">
 
-**Komparasi Machine Learning Klasik dan Deep Learning dengan LoRA**
+<p style="font-size: 1.1em; font-weight: 600; margin-bottom: 1rem;">
+Komparasi Machine Learning Klasik dan Deep Learning dengan LoRA
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10+-orange.svg)](https://www.tensorflow.org/)
-[![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python" style="margin: 0 4px;"></a>
+<a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-2.10+-orange.svg" alt="TensorFlow" style="margin: 0 4px;"></a>
+<a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-green.svg" alt="License" style="margin: 0 4px;"></a>
 
 </div>
 
@@ -117,25 +119,25 @@ Proyek ini menggunakan dataset **COVID-QU-Ex** dari Qatar University.
 
 <div class="grid cards" markdown>
 
--   :material-tensorflow:{ .lg .middle } __TensorFlow/Keras__
+-   <span style="font-size: 2em;">⚡</span> <strong>TensorFlow/Keras</strong>
 
     ---
 
     Deep learning framework untuk implementasi CNN, Transfer Learning, dan Vision Transformer
 
--   :material-brain:{ .lg .middle } __Scikit-learn__
+-   <span style="font-size: 2em;">🧠</span> <strong>Scikit-learn</strong>
 
     ---
 
     Machine learning klasik: SVM, Random Forest, KNN dengan HOG feature extraction
 
--   :material-image-edit:{ .lg .middle } __OpenCV__
+-   <span style="font-size: 2em;">🖼️</span> <strong>OpenCV</strong>
 
     ---
 
     Preprocessing citra: CLAHE, lung cropping, dan normalisasi
 
--   :material-github:{ .lg .middle } __HuggingFace__
+-   <span style="font-size: 2em;">🤗</span> <strong>HuggingFace</strong>
 
     ---
 
@@ -187,10 +189,6 @@ Proyek ini dibuat untuk keperluan akademik. Dataset COVID-QU-Ex memiliki lisensi
 ---
 
 <div align="center">
-
-**Last Updated:** November 2025
-
-Made with :material-heart: using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 
 </div>
 
