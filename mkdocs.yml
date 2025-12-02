@@ -1,0 +1,146 @@
+site_name: Deteksi COVID-19 pada Citra Chest X-Ray
+site_description: Komparasi Machine Learning Klasik dan Deep Learning dengan LoRA untuk Deteksi COVID-19
+site_author: Muhammad Hisyam Kamil & Elga Putri Tri Farma
+site_url: https://hisyam99.github.io/MACHINE_LEARNING
+
+repo_name: MACHINE_LEARNING
+repo_url: https://github.com/hisyam99/MACHINE_LEARNING
+# edit_uri: edit/main/docs/  # Uncomment jika ingin enable edit links
+
+# Copyright
+copyright: Copyright &copy; 2025 Muhammad Hisyam Kamil & Elga Putri Tri Farma
+
+# Theme Configuration
+theme:
+  name: material
+  language: id
+  palette:
+    # Light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs.sticky
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/medical-bag
+
+# Plugins
+plugins:
+  - search:
+      lang: id
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+  - minify:
+      minify_html: true
+  - awesome-pages
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+# Navigation
+nav:
+  - Home: index.md
+  - Tentang Proyek:
+    - about/overview.md
+    - about/team.md
+    - about/objectives.md
+  - Dataset:
+    - dataset/introduction.md
+    - dataset/statistics.md
+    - dataset/preprocessing.md
+    - dataset/citation.md
+  - Metodologi:
+    - methodology/preprocessing.md
+    - methodology/classic-ml.md
+    - methodology/custom-cnn.md
+    - methodology/transfer-learning.md
+    - methodology/lora.md
+  - Eksperimen:
+    - experiments/task1-classic-ml.md
+    - experiments/task2-cnn-lora.md
+    - experiments/task3-pretrained.md
+  - Hasil:
+    - results/overview.md
+    - results/comparison.md
+    - results/analysis.md
+    - results/visualizations.md
+  - Penggunaan:
+    - usage/installation.md
+    - usage/quickstart.md
+    - usage/notebooks.md
+  - Kesimpulan:
+    - conclusions/summary.md
+    - conclusions/recommendations.md
+    - conclusions/future-work.md
+  - Referensi: references.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hisyam99
+    - icon: fontawesome/solid/envelope
+      link: mailto:hisyam@kamil.my.id
+  # version:
+  #   provider: mike  # Uncomment jika ingin menggunakan versioning
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
+

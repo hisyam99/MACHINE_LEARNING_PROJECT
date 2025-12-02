@@ -3,6 +3,8 @@
 
 Repository ini berisi dokumentasi teknis, eksperimen, dan kode implementasi untuk proyek pembelajaran mesin (Machine Learning) yang bertujuan mendeteksi COVID-19, Pneumonia Non-COVID, dan kondisi Paru Normal menggunakan citra Chest X-Ray.
 
+> 📖 **Dokumentasi Lengkap:** [Baca dokumentasi online](https://YOUR_USERNAME.github.io/MACHINE_LEARNING/) | [Build lokal](#-membangun-dokumentasi-lokal)
+
 ---
 
 ## 👥 Anggota Kelompok
@@ -29,6 +31,7 @@ Repository ini berisi dokumentasi teknis, eksperimen, dan kode implementasi untu
 - [Output & Visualisasi](#-output--visualisasi)
 - [Kesimpulan](#-kesimpulan)
 - [Referensi](#-referensi)
+- [Dokumentasi](#-dokumentasi)
 
 ---
 
@@ -399,6 +402,98 @@ Proyek ini dibuat untuk keperluan akademik. Dataset COVID-QU-Ex memiliki lisensi
 
 - **Muhammad Hisyam Kamil:** hisyamkamil99@webmail.umm.ac.id
 - **Elga Putri Tri Farma:** elgafarma@webmail.umm.ac.id
+
+---
+
+## 📚 Dokumentasi
+
+Dokumentasi lengkap proyek ini tersedia dalam format **Material for MkDocs** yang dapat diakses secara online atau dibangun secara lokal.
+
+### 🌐 Dokumentasi Online
+
+Dokumentasi tersedia di: **https://hisyam99.github.io/MACHINE_LEARNING/**
+
+### 🏗️ Membangun Dokumentasi Lokal
+
+#### Prerequisites
+
+```bash
+pip install -r requirements-docs.txt
+```
+
+#### Build & Serve
+
+```bash
+# Build dokumentasi
+mkdocs build
+
+# Serve lokal (dengan auto-reload)
+mkdocs serve
+
+# Buka browser di http://127.0.0.1:8000
+```
+
+#### Deploy ke GitHub Pages
+
+Dokumentasi akan otomatis di-deploy ke GitHub Pages ketika:
+- Push ke branch `main` atau `master`
+- File di folder `docs/` atau `mkdocs.yml` berubah
+- GitHub Actions workflow berhasil dijalankan
+
+Untuk deploy manual:
+```bash
+mkdocs gh-deploy
+```
+
+### 📁 Struktur Dokumentasi
+
+```
+docs/
+├── index.md                    # Halaman utama
+├── about/                      # Tentang proyek
+│   ├── overview.md
+│   ├── team.md
+│   └── objectives.md
+├── dataset/                    # Dokumentasi dataset
+│   ├── introduction.md
+│   ├── statistics.md
+│   ├── preprocessing.md
+│   └── citation.md
+├── methodology/               # Metodologi
+│   ├── preprocessing.md
+│   ├── classic-ml.md
+│   ├── custom-cnn.md
+│   ├── transfer-learning.md
+│   └── lora.md
+├── experiments/               # Detail eksperimen
+│   ├── task1-classic-ml.md
+│   ├── task2-cnn-lora.md
+│   └── task3-pretrained.md
+├── results/                    # Hasil eksperimen
+│   ├── overview.md
+│   ├── comparison.md
+│   ├── analysis.md
+│   └── visualizations.md
+├── usage/                      # Panduan penggunaan
+│   ├── installation.md
+│   ├── quickstart.md
+│   └── notebooks.md
+├── conclusions/                # Kesimpulan
+│   ├── summary.md
+│   ├── recommendations.md
+│   └── future-work.md
+└── references.md              # Referensi
+```
+
+### 🎨 Fitur Dokumentasi
+
+- ✅ **Material Design** - UI modern dan responsif
+- ✅ **Dark Mode** - Tema gelap untuk kenyamanan mata
+- ✅ **Search** - Pencarian cepat di seluruh dokumentasi
+- ✅ **Navigation** - Navigasi yang mudah dan intuitif
+- ✅ **Code Highlighting** - Syntax highlighting untuk code blocks
+- ✅ **Responsive** - Mobile-friendly
+- ✅ **Auto-deploy** - Otomatis deploy ke GitHub Pages via GitHub Actions
 
 ---
 
