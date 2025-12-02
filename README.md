@@ -411,7 +411,7 @@ Dokumentasi lengkap proyek ini tersedia dalam format **Material for MkDocs** yan
 
 ### 🌐 Dokumentasi Online
 
-Dokumentasi tersedia di: **https://hisyam99.github.io/MACHINE_LEARNING/**
+Dokumentasi tersedia di: **https://hisyam99.github.io/MACHINE_LEARNING_PROJECT/**
 
 ### 🏗️ Membangun Dokumentasi Lokal
 

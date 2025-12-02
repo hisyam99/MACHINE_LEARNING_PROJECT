@@ -1,9 +1,9 @@
 site_name: Deteksi COVID-19 pada Citra Chest X-Ray
 site_description: Komparasi Machine Learning Klasik dan Deep Learning dengan LoRA untuk Deteksi COVID-19
 site_author: Muhammad Hisyam Kamil & Elga Putri Tri Farma
-site_url: https://hisyam99.github.io/MACHINE_LEARNING
+site_url: https://hisyam99.github.io/MACHINE_LEARNING_PROJECT
 
-repo_name: MACHINE_LEARNING
+repo_name: MACHINE_LEARNING_PROJECT
 repo_url: https://github.com/hisyam99/MACHINE_LEARNING_PROJECT
 # edit_uri: edit/main/docs/  # Uncomment jika ingin enable edit links
 
