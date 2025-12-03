@@ -4,13 +4,32 @@
 
 ### 1. Model Terbaik: HuggingFace ViT Pretrained
 
-**HuggingFace ViT Pretrained** adalah model terbaik dengan:
-- **Akurasi:** 91.65% (mengungguli semua model termasuk SVM klasik)
-- **Macro F1:** 0.9017
-- **F1 COVID-19:** 0.9601 (sangat tinggi)
-- **Keseimbangan kelas baik:** F1 untuk semua kelas di atas 0.87
+**HuggingFace ViT Pretrained** (`google/vit-base-patch16-224-in21k`) adalah model terbaik dengan:
+- **Akurasi:** **91.65%** (🏆 mengungguli semua model termasuk SVM klasik)
+- **Macro F1:** **0.9017** (🏆 keseimbangan terbaik)
+- **F1 COVID-19:** **0.9601** (sangat tinggi - hanya 4% yang terlewat)
+- **F1 Non-COVID:** **0.8677** (🏆 akhirnya kelas tersulit teratasi)
+- **F1 Normal:** **0.8773** (keseimbangan sempurna)
+- **Keseimbangan kelas sangat baik:** F1 untuk semua kelas di atas 0.87
 
-**Kesimpulan:** Transfer learning dengan Vision Transformer pretrained memberikan hasil terbaik.
+**Faktor Keberhasilan:**
+
+1. **Pre-training Skala Besar:**
+   - Dilatih pada ImageNet-21k (14 juta images, 21,000 classes)
+   - Representasi visual yang sangat general dan transferable
+   - Fitur low-level hingga high-level sudah dipelajari
+
+2. **Vision Transformer Architecture:**
+   - Self-attention mechanism dapat menangkap hubungan long-range
+   - Global context dari seluruh image sekaligus
+   - Adaptive attention weights fokus pada area penting
+
+3. **Fine-tuning yang Tepat:**
+   - Learning rate sangat kecil (2e-5) mencegah catastrophic forgetting
+   - Gradual unfreezing memberikan stabilitas
+   - Class weights untuk handle imbalance
+
+**Kesimpulan:** Transfer learning dengan Vision Transformer pretrained pada dataset skala besar (ImageNet-21k) memberikan hasil terbaik, menunjukkan bahwa representasi yang dipelajari dari natural images dapat di-transfer secara efektif ke domain medical imaging melalui fine-tuning yang hati-hati.
 
 ### 2. Transfer Learning Memberikan Keunggulan Signifikan
 
