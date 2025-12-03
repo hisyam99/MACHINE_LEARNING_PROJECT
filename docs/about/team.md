@@ -27,6 +27,6 @@ Untuk pertanyaan atau kolaborasi, silakan hubungi:
 Kami mengucapkan terima kasih kepada:
 
 - **Qatar University** untuk dataset COVID-QU-Ex
-- **Dosen Pengampu** mata kuliah Machine Learning
+- **Dosen Pengampu** mata kuliah Machine Learning: **Setio Basuki, S.T., M.T., Ph.D.**
 - **Komunitas Open Source** yang telah menyediakan tools dan library yang digunakan
 
