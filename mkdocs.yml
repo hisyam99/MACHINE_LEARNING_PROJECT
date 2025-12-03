@@ -32,12 +32,14 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.path
     - navigation.expand
     - navigation.top
     - navigation.indexes
     - navigation.instant
     - navigation.tracking
     - navigation.tabs.sticky
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.code.annotate
