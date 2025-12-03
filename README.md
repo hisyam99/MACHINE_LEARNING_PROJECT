@@ -3,7 +3,7 @@
 
 Repository ini berisi dokumentasi teknis, eksperimen, dan kode implementasi untuk proyek pembelajaran mesin (Machine Learning) yang bertujuan mendeteksi COVID-19, Pneumonia Non-COVID, dan kondisi Paru Normal menggunakan citra Chest X-Ray.
 
-> 📖 **Dokumentasi Lengkap:** [Baca dokumentasi online](https://hisyam99.github.io/MACHINE_LEARNING/) | [Build lokal](#-membangun-dokumentasi-lokal)
+> 📖 **Dokumentasi Lengkap:** [Baca dokumentasi online](https://hisyam99.github.io/MACHINE_LEARNING_PROJECT/) | [Build lokal](#-membangun-dokumentasi-lokal)
 
 ---
 
