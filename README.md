@@ -887,7 +887,7 @@ MACHINE_LEARNING/
 ├── TASK_FINAL:ML_TASK.ipynb          # Task final
 │
 ├── POSTER_MACHINE_LEARNING.png        # Poster penelitian
-├── Laporan_Machine_Learning_v3.pdf    # Laporan lengkap penelitian
+├── Laporan_Machine_Learning.pdf       # Laporan lengkap penelitian
 ├── mkdocs.yml                         # Konfigurasi MkDocs
 ├── requirements-docs.txt              # Dependencies untuk dokumentasi
 │
