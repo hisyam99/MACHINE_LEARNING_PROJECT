@@ -49,6 +49,18 @@ Repository ini berisi dokumentasi teknis, eksperimen, dan kode implementasi untu
 
 ## 🎯 Tentang Proyek
 
+### 📊 Academic Poster
+
+<div align="center">
+
+![Academic Poster](POSTER_MACHINE_LEARNING.png)
+
+**Academic Poster - Deteksi COVID-19 pada Citra Chest X-Ray**
+
+</div>
+
+---
+
 ### Tujuan Penelitian
 
 Proyek ini bertujuan untuk:
