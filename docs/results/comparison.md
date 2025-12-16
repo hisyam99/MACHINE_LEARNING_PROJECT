@@ -10,10 +10,11 @@
 | **SVM (RBF)** | 86.27% | 0.843 | - | 0.862 | 0.863 | - | - | - |
 | **DenseNet121 + LoRA** | 82.04% | 0.8003 | 0.8187 | 0.819 | 0.820 | 0.8743 | 0.7241 | 0.8025 |
 | **Custom CNN (+Aug)** | 81.35% | 0.7825 | 0.8093 | 0.809 | 0.813 | 0.8901 | 0.6601 | 0.7972 |
-| **Custom CNN (No Aug)** | 71.74% | 0.6586 | 0.7024 | 0.702 | 0.717 | 0.8342 | 0.4788 | 0.6627 |
-| **ViT (Keras)** | 68.54% | 0.6645 | 0.6876 | 0.688 | 0.685 | 0.7569 | 0.5921 | 0.6446 |
 | **kNN (k=5)** | 77.57% | 0.739 | - | 0.776 | 0.776 | - | - | - |
 | **Random Forest** | 76.09% | 0.719 | - | 0.761 | 0.761 | - | - | - |
+| **Custom CNN (No Aug)** | 71.74% | 0.6586 | 0.7024 | 0.702 | 0.717 | 0.8342 | 0.4788 | 0.6627 |
+| **Pure Custom CNN (No LoRA, No Aug)** | 70.37% | 0.6347 | 0.6736 | 0.760 | 0.704 | 0.7907 | 0.4615 | 0.6517 |
+| **ViT (Keras)** | 68.54% | 0.6645 | 0.6876 | 0.688 | 0.685 | 0.7569 | 0.5921 | 0.6446 |
 
 ## 🎯 Kategori Perbandingan
 
@@ -28,7 +29,8 @@
 | 5 | kNN (k=5) | 77.57% |
 | 6 | Random Forest | 76.09% |
 | 7 | Custom CNN (No Aug) | 71.74% |
-| 8 | ViT (Keras) | 68.54% |
+| 8 | Pure Custom CNN (No LoRA, No Aug) | 70.37% |
+| 9 | ViT (Keras) | 68.54% |
 
 ### 2. Macro F1-Score
 
@@ -42,6 +44,7 @@
 | 6 | Random Forest | 0.719 |
 | 7 | ViT (Keras) | 0.6645 |
 | 8 | Custom CNN (No Aug) | 0.6586 |
+| 9 | Pure Custom CNN (No LoRA, No Aug) | 0.6347 |
 
 ### 3. F1 COVID-19
 
@@ -51,7 +54,8 @@
 | 🥈 | **Custom CNN (+Aug)** | 0.8901 |
 | 🥉 | **DenseNet121 + LoRA** | 0.8743 |
 | 4 | Custom CNN (No Aug) | 0.8342 |
-| 5 | ViT (Keras) | 0.7569 |
+| 5 | Pure Custom CNN (No LoRA, No Aug) | 0.7907 |
+| 6 | ViT (Keras) | 0.7569 |
 
 ### 4. F1 Non-COVID
 
@@ -62,6 +66,7 @@
 | 🥉 | **Custom CNN (+Aug)** | 0.6601 |
 | 4 | ViT (Keras) | 0.5921 |
 | 5 | Custom CNN (No Aug) | 0.4788 |
+| 6 | Pure Custom CNN (No LoRA, No Aug) | 0.4615 |
 
 ### 5. F1 Normal
 
@@ -71,7 +76,8 @@
 | 🥈 | **DenseNet121 + LoRA** | 0.8025 |
 | 🥉 | **Custom CNN (+Aug)** | 0.7972 |
 | 4 | Custom CNN (No Aug) | 0.6627 |
-| 5 | ViT (Keras) | 0.6446 |
+| 5 | Pure Custom CNN (No LoRA, No Aug) | 0.6517 |
+| 6 | ViT (Keras) | 0.6446 |
 
 ## 🔍 Analisis Per Kategori
 
@@ -93,13 +99,29 @@
 
 **Kesimpulan:** Transfer learning memberikan keunggulan signifikan (+10.3%).
 
-### Dengan vs Tanpa Augmentation
+### Dengan vs Tanpa Augmentation & LoRA
+
+**Efek LoRA (tanpa augmentation):**
+
+| Model | Akurasi | Macro F1 | Improvement |
+|:------|:-------:|:--------:|:-----------:|
+| **Pure CNN (No LoRA)** | 70.37% | 0.6347 | Baseline |
+| **Custom CNN + LoRA** | 71.74% | 0.6586 | **+1.37% / +0.0239** |
+
+**Efek Data Augmentation (dengan LoRA):**
 
 | Model | Tanpa Aug | Dengan Aug | Improvement |
 |:------|:---------:|:----------:|:-----------:|
-| **Custom CNN** | 71.74% | 81.35% | **+9.61%** |
+| **Custom CNN + LoRA** | 71.74% | 81.35% | **+9.61%** |
 
-**Kesimpulan:** Data augmentation sangat penting untuk model from scratch.
+**Efek Gabungan (dari baseline pure):**
+
+| Model | Akurasi | Macro F1 | Total Improvement |
+|:------|:-------:|:--------:|:-----------------:|
+| **Pure CNN (No LoRA, No Aug)** | 70.37% | 0.6347 | Baseline |
+| **Custom CNN + LoRA + Aug** | 81.35% | 0.7825 | **+10.98% / +0.1478** |
+
+**Kesimpulan:** Data augmentation memberikan dampak terbesar (+9.61%), LoRA menambah efisiensi parameter dan stabilitas (+1.37%).
 
 ## 📈 Trade-off Analysis
 
@@ -123,15 +145,16 @@
 
 ## 📊 Benchmark Lengkap - Deep Learning Models
 
-### Tabel Perbandingan Lima Model Deep Learning
+### Tabel Perbandingan Enam Model Deep Learning
 
-Selain analisis per-model, dilakukan juga **benchmark kuantitatif** yang secara khusus membandingkan lima model deep learning utama yang diuji pada Tahap 5-6:
+Selain analisis per-model, dilakukan juga **benchmark kuantitatif** yang secara khusus membandingkan enam model deep learning utama yang diuji pada Tahap 5-6:
 
-1. **Custom CNN (No Aug, LoRA Head)** - Baseline from scratch
-2. **Custom CNN (+Aug, LoRA Head)** - From scratch dengan augmentasi
-3. **HF ViT Pretrained** - Transfer learning transformer (BEST)
-4. **DenseNet121 + LoRA** - Transfer learning CNN
-5. **ViT (Keras)** - Transformer from scratch
+1. **Pure Custom CNN (No LoRA, No Aug)** - Baseline murni tanpa optimasi
+2. **Custom CNN (No Aug, LoRA Head)** - Baseline from scratch dengan LoRA
+3. **Custom CNN (+Aug, LoRA Head)** - From scratch dengan augmentasi
+4. **HF ViT Pretrained** - Transfer learning transformer (BEST)
+5. **DenseNet121 + LoRA** - Transfer learning CNN
+6. **ViT (Keras)** - Transformer from scratch
 
 **Tabel Benchmark Lengkap:**
 
@@ -141,6 +164,7 @@ Selain analisis per-model, dilakukan juga **benchmark kuantitatif** yang secara 
 | **DenseNet121 + LoRA** | 0.8204 | 0.8003 | 0.8187 | 0.8743 | 0.7241 | 0.8025 |
 | **Custom CNN (+Aug)** | 0.8135 | 0.7825 | 0.8093 | 0.8901 | 0.6601 | 0.7972 |
 | **Custom CNN (No Aug)** | 0.7174 | 0.6586 | 0.7024 | 0.8342 | 0.4788 | 0.6627 |
+| **Pure Custom CNN (No LoRA, No Aug)** | 0.7037 | 0.6347 | 0.6736 | 0.7907 | 0.4615 | 0.6517 |
 | **ViT (Keras)** | 0.6854 | 0.6645 | 0.6876 | 0.7569 | 0.5921 | 0.6446 |
 
 ### Visualisasi Benchmark - Akurasi
@@ -184,10 +208,11 @@ Dari Tabel dan visualisasi terlihat beberapa poin penting:
 - Menariknya, pada benchmark ini, varian dengan augmentasi justru mengungguli varian tanpa augmentasi
 - Ini mengindikasikan bahwa ketika skenario augmentasi disetel lebih moderat dan konsisten dengan pipeline model lain, Custom CNN dapat memanfaatkan augmentasi secara lebih efektif
 
-**Custom CNN (No Aug, LoRA Head)** dan **ViT (Keras)** berada di posisi terbawah:
-- **Custom CNN No Aug:** akurasi ≈ 71.74%, Macro-F1 ≈ 0.66
+**Pure Custom CNN (No LoRA, No Aug)**, **Custom CNN (No Aug, LoRA Head)**, dan **ViT (Keras)** berada di posisi terbawah:
+- **Pure Custom CNN (No LoRA, No Aug):** akurasi ≈ 70.37%, Macro-F1 ≈ 0.63 (baseline murni)
+- **Custom CNN No Aug (LoRA Head):** akurasi ≈ 71.74%, Macro-F1 ≈ 0.66 (peningkatan +1.37% dari LoRA)
 - **ViT Keras:** akurasi ≈ 68.54%, Macro-F1 ≈ 0.66
-- Keduanya tetap memberi gambaran dasar yang penting: CNN kecil dari nol cenderung terbatas oleh kapasitas, sedangkan ViT yang dilatih dari awal tanpa pre-training besar cenderung underfitting pada dataset berskala menengah
+- Ketiganya tetap memberi gambaran dasar yang penting: CNN kecil dari nol cenderung terbatas oleh kapasitas, LoRA memberikan sedikit peningkatan dengan efisiensi parameter, sedangkan ViT yang dilatih dari awal tanpa pre-training besar cenderung underfitting pada dataset berskala menengah
 
 **Kesimpulan Umum:**
 Benchmark ini menegaskan bahwa **pre-training skala besar** (HF ViT) dan **transfer learning CNN** (DenseNet + LoRA) memberikan lompatan performa yang signifikan dibanding model dari nol.
@@ -247,10 +272,15 @@ Berdasarkan seluruh hasil benchmark ini, posisi lima model deep learning yang di
 - Berfungsi sebagai **jembatan** antara model ringan dari nol dan arsitektur besar pre-trained
 - Setelah augmentasi disetel dengan benar, model ini mampu mendekati performa DenseNet+LoRA dengan jumlah parameter yang jauh lebih kecil
 
-**4️⃣ Custom CNN (No Aug, LoRA Head)** dan **5️⃣ ViT (Keras)**
-- Keduanya lebih tepat diposisikan sebagai **baseline**:
-  - **Custom CNN No Aug** menggambarkan batas kemampuan CNN kecil tanpa bantuan augmentasi yang memadai
+**4️⃣ Custom CNN (No Aug, LoRA Head)**, **5️⃣ Pure Custom CNN (No LoRA, No Aug)**, dan **6️⃣ ViT (Keras)**
+- Ketiganya lebih tepat diposisikan sebagai **baseline**:
+  - **Custom CNN No Aug (LoRA)** menggambarkan batas kemampuan CNN kecil tanpa bantuan augmentasi yang memadai, dengan sedikit bantuan LoRA
+  - **Pure Custom CNN (No LoRA, No Aug)** menggambarkan baseline murni CNN dari nol tanpa optimasi apapun
   - **ViT Keras** menggambarkan keterbatasan transformer yang dilatih dari nol pada dataset medis berskala menengah
+  
+**Insight dari Pure Custom CNN:**
+- Memberikan baseline yang jelas untuk mengukur kontribusi LoRA (+1.37% akurasi) dan augmentasi (+9.61% dari LoRA baseline, +10.98% dari pure baseline)
+- Menunjukkan bahwa kombinasi LoRA + Augmentasi memberikan peningkatan yang sangat signifikan dari baseline murni
 
 #### 4. Integrasi dengan Model Klasik
 
@@ -267,14 +297,17 @@ Dalam konteks keseluruhan penelitian, benchmark ini juga memperjelas posisi rela
 | 5 | kNN (k=5) | Classic ML | 77.57% | 0.739 |
 | 6 | Random Forest | Classic ML | 76.09% | 0.719 |
 | 7 | Custom CNN (No Aug) | Deep Learning | 71.74% | 0.6586 |
-| 8 | ViT (Keras) | Deep Learning | 68.54% | 0.6645 |
+| 8 | Pure Custom CNN (No LoRA, No Aug) | Deep Learning | 70.37% | 0.6347 |
+| 9 | ViT (Keras) | Deep Learning | 68.54% | 0.6645 |
 
 **Key Insights:**
 
 1. **Pre-training berskala besar (HF ViT Pretrained)** dan **transfer learning CNN (DenseNet121 + LoRA)** memberikan peningkatan paling signifikan dibanding model dari nol
 2. **SVM klasik tetap sangat kompetitif**, bahkan mengungguli banyak model deep learning (DenseNet, Custom CNN)
-3. **Custom CNN + LoRA** tetap relevan sebagai opsi model yang jauh lebih ringan, terutama bila resource komputasi terbatas atau deployment dilakukan pada perangkat dengan kemampuan hardware sederhana
-4. **Untuk pengembangan ke depan**, kombinasi HF ViT Pretrained / DenseNet121 + LoRA dengan pendekatan klasik seperti HOG+SVM dalam sebuah **ensemble** berpotensi memberikan sistem pendukung keputusan yang:
+3. **LoRA memberikan efisiensi parameter signifikan**: Pure CNN (70.37%) vs CNN+LoRA (71.74%) - peningkatan +1.37% dengan parameter jauh lebih efisien
+4. **Data Augmentation adalah faktor kunci**: peningkatan +9.61% dari LoRA baseline dan +10.98% dari pure baseline menunjukkan pentingnya augmentasi untuk model from scratch
+5. **Custom CNN + LoRA** tetap relevan sebagai opsi model yang jauh lebih ringan, terutama bila resource komputasi terbatas atau deployment dilakukan pada perangkat dengan kemampuan hardware sederhana
+6. **Untuk pengembangan ke depan**, kombinasi HF ViT Pretrained / DenseNet121 + LoRA dengan pendekatan klasik seperti HOG+SVM dalam sebuah **ensemble** berpotensi memberikan sistem pendukung keputusan yang:
    - Akurat secara global
    - Sensitif terhadap kasus COVID-19
    - Lebih robust terhadap variasi kualitas citra dan pola kelainan di kelas Non-COVID

@@ -1,0 +1,875 @@
+path,true_id,true,svm_pred_id,svm_pred,svm_prob_max,rf_pred_id,rf_pred,rf_prob_max,knn_pred_id,knn_pred,knn_prob_max
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2310.png,0,COVID-19,0,COVID-19,0.4225985736848079,0,COVID-19,0.5033333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3021.png,0,COVID-19,0,COVID-19,0.8407916403061045,0,COVID-19,0.6466666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3773.png,0,COVID-19,0,COVID-19,0.9784457503791972,0,COVID-19,0.59,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1858.png,0,COVID-19,1,Non-COVID,0.4734101711531275,0,COVID-19,0.4266666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10326).png,1,Non-COVID,1,Non-COVID,0.5254989484623909,0,COVID-19,0.64,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10535).png,1,Non-COVID,1,Non-COVID,0.9665882365272503,1,Non-COVID,0.4766666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2782.png,0,COVID-19,0,COVID-19,0.8465544472027868,0,COVID-19,0.5166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11958).png,2,Normal,2,Normal,0.9941826263386698,2,Normal,0.8266666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3167.png,0,COVID-19,0,COVID-19,0.9376626688084516,0,COVID-19,0.8066666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3622.png,0,COVID-19,0,COVID-19,0.4917206542927738,0,COVID-19,0.49,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10540).png,1,Non-COVID,0,COVID-19,0.5665327773131148,0,COVID-19,0.5266666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4368.png,0,COVID-19,0,COVID-19,0.789283776842331,0,COVID-19,0.6633333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (137).png,1,Non-COVID,2,Normal,0.7151119927522106,2,Normal,0.5666666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_999.png,0,COVID-19,0,COVID-19,0.47739072055208776,0,COVID-19,0.6566666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1536).png,2,Normal,2,Normal,0.6296953542739027,0,COVID-19,0.4,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3392).png,1,Non-COVID,1,Non-COVID,0.567913216971826,0,COVID-19,0.5733333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1478.png,0,COVID-19,0,COVID-19,0.7919377195303225,0,COVID-19,0.5466666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11959).png,1,Non-COVID,1,Non-COVID,0.9850620696351834,1,Non-COVID,0.7266666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (751).png,2,Normal,2,Normal,0.7277166146281205,2,Normal,0.51,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1925).png,2,Normal,0,COVID-19,0.7091839577031578,0,COVID-19,0.5433333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4124.png,0,COVID-19,2,Normal,0.814920470553572,2,Normal,0.42333333333333334,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (662).png,2,Normal,2,Normal,0.749525552424889,2,Normal,0.41,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (360).png,1,Non-COVID,0,COVID-19,0.5945051647253843,0,COVID-19,0.5533333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_721.png,0,COVID-19,0,COVID-19,0.966049933629983,0,COVID-19,0.7166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4931).png,1,Non-COVID,1,Non-COVID,0.5814959560192737,0,COVID-19,0.49333333333333335,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10421).png,1,Non-COVID,1,Non-COVID,0.8686094266617306,0,COVID-19,0.6033333333333334,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2521.png,0,COVID-19,0,COVID-19,0.9737148546855678,0,COVID-19,0.7866666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4572.png,0,COVID-19,0,COVID-19,0.9074434011053116,0,COVID-19,0.7433333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_734.png,0,COVID-19,0,COVID-19,0.9341668348888243,0,COVID-19,0.7233333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_1984.png,0,COVID-19,0,COVID-19,0.8778653904623601,0,COVID-19,0.62,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3641.png,0,COVID-19,0,COVID-19,0.9105155168364434,0,COVID-19,0.59,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3195.png,0,COVID-19,0,COVID-19,0.8924056818617238,0,COVID-19,0.6533333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1658.png,0,COVID-19,0,COVID-19,0.9613851518348173,0,COVID-19,0.6,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4358.png,0,COVID-19,0,COVID-19,0.9652759538074813,0,COVID-19,0.75,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_864.png,0,COVID-19,0,COVID-19,0.9933874364479645,0,COVID-19,0.8533333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (36).png,1,Non-COVID,1,Non-COVID,0.5605183124243277,1,Non-COVID,0.4866666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (129).png,1,Non-COVID,1,Non-COVID,0.5584189011553798,0,COVID-19,0.44,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1480.png,0,COVID-19,0,COVID-19,0.9721984294186756,0,COVID-19,0.63,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11815).png,2,Normal,2,Normal,0.9475620416089938,2,Normal,0.83,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2988.png,0,COVID-19,0,COVID-19,0.7392519182431591,0,COVID-19,0.74,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11864).png,2,Normal,2,Normal,0.9495348295646459,2,Normal,0.6133333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_483.png,0,COVID-19,0,COVID-19,0.9750047259108583,0,COVID-19,0.6533333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1445).png,2,Normal,2,Normal,0.7479940350231936,2,Normal,0.5566666666666666,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2875.png,0,COVID-19,0,COVID-19,0.9731961659012801,0,COVID-19,0.6333333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1765.png,0,COVID-19,0,COVID-19,0.5483423169234262,0,COVID-19,0.56,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (638).png,1,Non-COVID,2,Normal,0.6966246436445332,0,COVID-19,0.38,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11859).png,2,Normal,2,Normal,0.9926863751391277,2,Normal,0.79,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2328.png,0,COVID-19,0,COVID-19,0.9942606021376195,0,COVID-19,0.7966666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11967).png,2,Normal,2,Normal,0.9890955928136382,2,Normal,0.7533333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2350.png,0,COVID-19,2,Normal,0.7710079247990196,2,Normal,0.7033333333333334,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3301).png,1,Non-COVID,2,Normal,0.4962559491698941,0,COVID-19,0.3933333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (85).png,1,Non-COVID,1,Non-COVID,0.6182405993449717,0,COVID-19,0.45666666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1358.png,0,COVID-19,0,COVID-19,0.7991429567042617,0,COVID-19,0.57,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_152.png,0,COVID-19,0,COVID-19,0.5691264216185586,0,COVID-19,0.64,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (116).png,1,Non-COVID,1,Non-COVID,0.7473650553192368,0,COVID-19,0.44666666666666666,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (9740).png,2,Normal,2,Normal,0.7866783062159411,2,Normal,0.44,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (64).png,2,Normal,2,Normal,0.953109493065014,2,Normal,0.5666666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (482).png,1,Non-COVID,0,COVID-19,0.6753026660742495,0,COVID-19,0.5233333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1681).png,2,Normal,2,Normal,0.5953170510568744,0,COVID-19,0.41,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4906).png,1,Non-COVID,2,Normal,0.6184117517739085,0,COVID-19,0.42333333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_564.png,0,COVID-19,0,COVID-19,0.9968180794744943,0,COVID-19,0.9266666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1261.png,0,COVID-19,2,Normal,0.5213973609536664,0,COVID-19,0.43333333333333335,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1087.png,0,COVID-19,0,COVID-19,0.9445905983159067,0,COVID-19,0.69,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1908).png,2,Normal,1,Non-COVID,0.6809995602607414,0,COVID-19,0.4,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (216).png,2,Normal,2,Normal,0.8290093213770225,2,Normal,0.4666666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3024.png,0,COVID-19,0,COVID-19,0.9950624256835916,0,COVID-19,0.9266666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (176).png,1,Non-COVID,2,Normal,0.749310434638142,0,COVID-19,0.48,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4059.png,0,COVID-19,0,COVID-19,0.6967149446377324,0,COVID-19,0.6833333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2099.png,0,COVID-19,0,COVID-19,0.9484578476254534,0,COVID-19,0.7366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1715).png,2,Normal,0,COVID-19,0.5094647769850745,0,COVID-19,0.49666666666666665,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4035.png,0,COVID-19,0,COVID-19,0.9921215888994587,0,COVID-19,0.7433333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2884.png,0,COVID-19,0,COVID-19,0.8868030439358815,0,COVID-19,0.7066666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_208.png,0,COVID-19,0,COVID-19,0.9632032495900298,0,COVID-19,0.71,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_590.png,0,COVID-19,0,COVID-19,0.9726045160802917,0,COVID-19,0.6966666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4146.png,0,COVID-19,0,COVID-19,0.9437130167979743,0,COVID-19,0.8366666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11990).png,1,Non-COVID,1,Non-COVID,0.8947627980537791,1,Non-COVID,0.6733333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (733).png,2,Normal,2,Normal,0.4886879388195884,0,COVID-19,0.47,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2638.png,0,COVID-19,0,COVID-19,0.9419243377211363,0,COVID-19,0.6866666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1673.png,0,COVID-19,0,COVID-19,0.9955131479602221,0,COVID-19,0.75,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2140.png,0,COVID-19,0,COVID-19,0.6994601029526477,0,COVID-19,0.59,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2181.png,0,COVID-19,0,COVID-19,0.9987044416117968,0,COVID-19,0.9066666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4308.png,0,COVID-19,0,COVID-19,0.9567166062208674,0,COVID-19,0.74,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3567.png,0,COVID-19,0,COVID-19,0.8479465210029511,0,COVID-19,0.55,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3463.png,0,COVID-19,0,COVID-19,0.9377546879552993,0,COVID-19,0.7833333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10443).png,1,Non-COVID,1,Non-COVID,0.9369626737284542,1,Non-COVID,0.68,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1943).png,2,Normal,2,Normal,0.7489316160739906,2,Normal,0.5233333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1506).png,2,Normal,0,COVID-19,0.5293806169296761,0,COVID-19,0.5133333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4963).png,1,Non-COVID,1,Non-COVID,0.6690580427891317,0,COVID-19,0.42,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1451.png,0,COVID-19,0,COVID-19,0.9933887767580257,0,COVID-19,0.95,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (568).png,1,Non-COVID,0,COVID-19,0.7051166490235723,0,COVID-19,0.6,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2958.png,0,COVID-19,0,COVID-19,0.5372154510267012,0,COVID-19,0.5333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3255).png,1,Non-COVID,1,Non-COVID,0.9378223779342473,0,COVID-19,0.57,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11822).png,2,Normal,2,Normal,0.8361333531225736,2,Normal,0.4066666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3963.png,0,COVID-19,0,COVID-19,0.9474570854278289,0,COVID-19,0.91,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10323).png,1,Non-COVID,1,Non-COVID,0.7715173467188616,0,COVID-19,0.45666666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_852.png,0,COVID-19,0,COVID-19,0.4681899542274709,0,COVID-19,0.51,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4004.png,0,COVID-19,0,COVID-19,0.9666008851133495,0,COVID-19,0.89,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3104.png,0,COVID-19,0,COVID-19,0.9044613790172106,0,COVID-19,0.7066666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3917.png,0,COVID-19,0,COVID-19,0.9827170612357807,0,COVID-19,0.5433333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (95).png,1,Non-COVID,1,Non-COVID,0.5875575695563997,1,Non-COVID,0.47,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (294).png,1,Non-COVID,1,Non-COVID,0.5791306475924187,0,COVID-19,0.55,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3257).png,1,Non-COVID,1,Non-COVID,0.9621866825720748,1,Non-COVID,0.49333333333333335,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (519).png,1,Non-COVID,0,COVID-19,0.48992944820745465,0,COVID-19,0.52,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4526.png,0,COVID-19,0,COVID-19,0.9202282064028068,0,COVID-19,0.75,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11905).png,1,Non-COVID,1,Non-COVID,0.8350675614432728,1,Non-COVID,0.57,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3292.png,0,COVID-19,0,COVID-19,0.994811109347431,0,COVID-19,0.8866666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3880.png,0,COVID-19,0,COVID-19,0.8955548247065587,0,COVID-19,0.45666666666666667,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (19).png,2,Normal,2,Normal,0.8640060436715404,1,Non-COVID,0.4266666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1216.png,0,COVID-19,0,COVID-19,0.9120386779665107,0,COVID-19,0.62,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_17.png,0,COVID-19,0,COVID-19,0.5623104273556854,0,COVID-19,0.68,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2064).png,2,Normal,2,Normal,0.4750247819428357,0,COVID-19,0.5033333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_865.png,0,COVID-19,1,Non-COVID,0.6096858525758492,0,COVID-19,0.4166666666666667,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_368.png,0,COVID-19,0,COVID-19,0.9644434859342009,0,COVID-19,0.68,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2821.png,0,COVID-19,0,COVID-19,0.9405053618560684,0,COVID-19,0.6566666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3242.png,0,COVID-19,0,COVID-19,0.8454749952431014,0,COVID-19,0.6666666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11178).png,1,Non-COVID,1,Non-COVID,0.5750934125597948,0,COVID-19,0.5233333333333333,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_583.png,0,COVID-19,0,COVID-19,0.9104679220393167,0,COVID-19,0.76,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3159.png,0,COVID-19,0,COVID-19,0.9962726953230917,0,COVID-19,0.7533333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1907).png,2,Normal,2,Normal,0.9022406877423168,2,Normal,0.48333333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10355).png,1,Non-COVID,1,Non-COVID,0.8649278504778185,1,Non-COVID,0.5366666666666666,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1585).png,2,Normal,2,Normal,0.858619946601782,0,COVID-19,0.42333333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_1911.png,0,COVID-19,0,COVID-19,0.9131041730003563,0,COVID-19,0.57,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2804.png,0,COVID-19,0,COVID-19,0.698039127614322,0,COVID-19,0.5366666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3310.png,0,COVID-19,0,COVID-19,0.9860133591137751,0,COVID-19,0.6333333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1769.png,0,COVID-19,0,COVID-19,0.9102460920803653,0,COVID-19,0.4766666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (659).png,1,Non-COVID,1,Non-COVID,0.6696808869871317,0,COVID-19,0.5,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2381.png,0,COVID-19,0,COVID-19,0.6754548646614494,0,COVID-19,0.5666666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4971).png,1,Non-COVID,0,COVID-19,0.9704830155284383,0,COVID-19,0.7066666666666667,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2533.png,0,COVID-19,0,COVID-19,0.930864638550569,0,COVID-19,0.63,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10414).png,1,Non-COVID,1,Non-COVID,0.9393182747005139,1,Non-COVID,0.7,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1691).png,2,Normal,1,Non-COVID,0.8486364243350027,1,Non-COVID,0.4866666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (333).png,1,Non-COVID,0,COVID-19,0.41765012507953575,0,COVID-19,0.4866666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2699.png,0,COVID-19,0,COVID-19,0.8724721994342091,0,COVID-19,0.6733333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3335.png,0,COVID-19,0,COVID-19,0.9923969010411914,0,COVID-19,0.5666666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4904).png,1,Non-COVID,0,COVID-19,0.9581338638387922,0,COVID-19,0.5833333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11976).png,2,Normal,2,Normal,0.9364837049501653,2,Normal,0.6266666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_827.png,0,COVID-19,0,COVID-19,0.9330820055679283,0,COVID-19,0.64,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11172).png,1,Non-COVID,1,Non-COVID,0.9872005358893559,1,Non-COVID,0.8266666666666667,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3821.png,0,COVID-19,0,COVID-19,0.7463853473826513,0,COVID-19,0.6633333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10420).png,1,Non-COVID,1,Non-COVID,0.9832847252686007,1,Non-COVID,0.6666666666666666,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2967.png,0,COVID-19,0,COVID-19,0.9578528105970752,0,COVID-19,0.94,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2430.png,0,COVID-19,0,COVID-19,0.980701793235429,0,COVID-19,0.7266666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (139).png,1,Non-COVID,0,COVID-19,0.6044954828236161,0,COVID-19,0.5333333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_199.png,0,COVID-19,0,COVID-19,0.98630178641564,0,COVID-19,0.8833333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4582.png,0,COVID-19,0,COVID-19,0.8143214030612705,0,COVID-19,0.5866666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (450).png,1,Non-COVID,1,Non-COVID,0.9409412846295806,1,Non-COVID,0.46,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1970).png,2,Normal,2,Normal,0.38683950580235205,0,COVID-19,0.5766666666666667,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (5006).png,1,Non-COVID,0,COVID-19,0.6950783738276035,0,COVID-19,0.5766666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1913).png,2,Normal,2,Normal,0.8147269691933868,0,COVID-19,0.4633333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11847).png,2,Normal,2,Normal,0.9811987720821974,2,Normal,0.8033333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1864).png,2,Normal,2,Normal,0.7231476139087452,2,Normal,0.51,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3514.png,0,COVID-19,2,Normal,0.8027425124173777,2,Normal,0.4066666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3581.png,0,COVID-19,0,COVID-19,0.9885091188738823,0,COVID-19,0.5666666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11965).png,1,Non-COVID,1,Non-COVID,0.9605869168392925,1,Non-COVID,0.6,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4535.png,0,COVID-19,0,COVID-19,0.9084398636136071,0,COVID-19,0.5033333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10245).png,2,Normal,2,Normal,0.8905198876306645,2,Normal,0.73,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (91).png,2,Normal,2,Normal,0.9546388412258703,2,Normal,0.61,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3243.png,0,COVID-19,0,COVID-19,0.505575004537014,0,COVID-19,0.49,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4950).png,1,Non-COVID,0,COVID-19,0.7279031956712738,0,COVID-19,0.5966666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2178.png,0,COVID-19,0,COVID-19,0.7640844404105129,0,COVID-19,0.6366666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10565).png,1,Non-COVID,1,Non-COVID,0.9607478805306066,1,Non-COVID,0.6166666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4507.png,0,COVID-19,0,COVID-19,0.7894759306329058,0,COVID-19,0.7833333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1713).png,2,Normal,2,Normal,0.9459506283784682,2,Normal,0.46,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10380).png,1,Non-COVID,1,Non-COVID,0.5894620980788151,1,Non-COVID,0.5566666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4363.png,0,COVID-19,0,COVID-19,0.7595562871152027,0,COVID-19,0.68,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3307.png,0,COVID-19,0,COVID-19,0.7911256193399423,0,COVID-19,0.5866666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (20).png,2,Normal,2,Normal,0.9459747820043041,2,Normal,0.75,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_704.png,0,COVID-19,1,Non-COVID,0.5802470953449846,0,COVID-19,0.52,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10233).png,2,Normal,2,Normal,0.9358591656697017,2,Normal,0.5133333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_522.png,0,COVID-19,0,COVID-19,0.9855434602055085,0,COVID-19,0.7033333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1449.png,0,COVID-19,0,COVID-19,0.7954967848261698,0,COVID-19,0.6266666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2025).png,2,Normal,2,Normal,0.5081952504022614,2,Normal,0.44,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2570.png,0,COVID-19,0,COVID-19,0.6504740623871834,0,COVID-19,0.53,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1561.png,0,COVID-19,0,COVID-19,0.45221464674524897,0,COVID-19,0.56,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_741.png,0,COVID-19,0,COVID-19,0.9830816528003771,0,COVID-19,0.5166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2197.png,0,COVID-19,0,COVID-19,0.9285301008831474,0,COVID-19,0.47,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_549.png,0,COVID-19,0,COVID-19,0.995109383276993,0,COVID-19,0.8666666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4500.png,0,COVID-19,0,COVID-19,0.7457768040182814,0,COVID-19,0.51,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3030.png,0,COVID-19,0,COVID-19,0.6850633182990665,0,COVID-19,0.6466666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (457).png,1,Non-COVID,1,Non-COVID,0.9335570643487663,0,COVID-19,0.4666666666666667,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10436).png,1,Non-COVID,1,Non-COVID,0.9430387528583053,1,Non-COVID,0.61,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1307.png,0,COVID-19,0,COVID-19,0.9711875036282505,0,COVID-19,0.7866666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10604).png,1,Non-COVID,1,Non-COVID,0.9570607531944106,1,Non-COVID,0.62,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_444.png,0,COVID-19,0,COVID-19,0.9898184041813932,0,COVID-19,0.9166666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11909).png,1,Non-COVID,1,Non-COVID,0.640515495898422,0,COVID-19,0.5666666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1098.png,0,COVID-19,0,COVID-19,0.8246226737694476,0,COVID-19,0.62,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3269.png,0,COVID-19,0,COVID-19,0.8925143894859126,0,COVID-19,0.41333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1308.png,0,COVID-19,0,COVID-19,0.9962060283007688,0,COVID-19,0.9066666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3181.png,0,COVID-19,2,Normal,0.6108679338394285,0,COVID-19,0.49,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10393).png,1,Non-COVID,1,Non-COVID,0.9607091110909021,1,Non-COVID,0.6066666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_441.png,0,COVID-19,0,COVID-19,0.8081743280856001,0,COVID-19,0.49,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (632).png,2,Normal,1,Non-COVID,0.5428293513938682,1,Non-COVID,0.3566666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10477).png,1,Non-COVID,0,COVID-19,0.4936977003245127,0,COVID-19,0.4766666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2132.png,0,COVID-19,0,COVID-19,0.9579237846629824,0,COVID-19,0.7366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_862.png,0,COVID-19,0,COVID-19,0.9975705375986821,0,COVID-19,0.8666666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2013.png,0,COVID-19,0,COVID-19,0.9450805756898919,0,COVID-19,0.71,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2298.png,0,COVID-19,0,COVID-19,0.9982667993865323,0,COVID-19,0.9,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_871.png,0,COVID-19,1,Non-COVID,0.5853985139544561,2,Normal,0.41,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (784).png,2,Normal,2,Normal,0.4928857754453697,0,COVID-19,0.36333333333333334,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1205.png,0,COVID-19,0,COVID-19,0.9857165954613355,0,COVID-19,0.5633333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3500.png,0,COVID-19,0,COVID-19,0.9894298488644269,0,COVID-19,0.8766666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (245).png,1,Non-COVID,1,Non-COVID,0.5306965436178291,2,Normal,0.36,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1492.png,0,COVID-19,0,COVID-19,0.9550400212146821,0,COVID-19,0.6533333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_709.png,0,COVID-19,0,COVID-19,0.9867551894867451,0,COVID-19,0.6933333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_893.png,0,COVID-19,0,COVID-19,0.9240964244701533,0,COVID-19,0.7266666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4957).png,1,Non-COVID,0,COVID-19,0.7870445891004971,0,COVID-19,0.6266666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3990.png,0,COVID-19,0,COVID-19,0.7704457923208242,0,COVID-19,0.6533333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_796.png,0,COVID-19,0,COVID-19,0.9847581767855618,0,COVID-19,0.7466666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3886.png,0,COVID-19,0,COVID-19,0.9825279201808493,0,COVID-19,0.7033333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4268.png,0,COVID-19,0,COVID-19,0.7516649942130859,0,COVID-19,0.61,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3653.png,0,COVID-19,0,COVID-19,0.9479293478892071,0,COVID-19,0.5966666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3992.png,0,COVID-19,0,COVID-19,0.7855151286752713,0,COVID-19,0.5266666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (413).png,1,Non-COVID,0,COVID-19,0.7663114201310278,0,COVID-19,0.7166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_1908.png,0,COVID-19,0,COVID-19,0.8703601923451691,0,COVID-19,0.6866666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (118).png,1,Non-COVID,0,COVID-19,0.3561790374437993,0,COVID-19,0.57,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4265.png,0,COVID-19,0,COVID-19,0.9774419100367744,0,COVID-19,0.78,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_533.png,0,COVID-19,0,COVID-19,0.9173854601690543,0,COVID-19,0.6733333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (479).png,1,Non-COVID,2,Normal,0.5508925064573785,0,COVID-19,0.3933333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3358.png,0,COVID-19,2,Normal,0.8459919614384963,2,Normal,0.52,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3687.png,0,COVID-19,0,COVID-19,0.7247652741578887,0,COVID-19,0.6933333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1637.png,0,COVID-19,0,COVID-19,0.9092615790328751,0,COVID-19,0.59,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_209.png,0,COVID-19,0,COVID-19,0.593413119079701,0,COVID-19,0.55,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3646.png,0,COVID-19,0,COVID-19,0.993774777395669,0,COVID-19,0.6966666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2858.png,0,COVID-19,0,COVID-19,0.6820690785250872,1,Non-COVID,0.49666666666666665,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1532).png,2,Normal,2,Normal,0.5157278607399104,0,COVID-19,0.36333333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4478.png,0,COVID-19,0,COVID-19,0.9495535811968582,0,COVID-19,0.8766666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2700.png,0,COVID-19,0,COVID-19,0.9514626938348303,0,COVID-19,0.5933333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10469).png,1,Non-COVID,1,Non-COVID,0.9643738707123104,1,Non-COVID,0.6066666666666667,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4209.png,0,COVID-19,0,COVID-19,0.9959619771357682,0,COVID-19,0.9533333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (9735).png,2,Normal,2,Normal,0.8862788293295178,2,Normal,0.65,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2997.png,0,COVID-19,0,COVID-19,0.7289173579791411,0,COVID-19,0.6266666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1955).png,2,Normal,0,COVID-19,0.44624252102695394,0,COVID-19,0.43666666666666665,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (776).png,2,Normal,1,Non-COVID,0.5392542903746655,2,Normal,0.36333333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_375.png,0,COVID-19,0,COVID-19,0.9877634168599215,0,COVID-19,0.5166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2651.png,0,COVID-19,0,COVID-19,0.9925130982258352,0,COVID-19,0.7766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (104).png,2,Normal,2,Normal,0.4755556901198214,2,Normal,0.41,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11154).png,1,Non-COVID,1,Non-COVID,0.9509333675354067,1,Non-COVID,0.5266666666666666,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4211.png,0,COVID-19,1,Non-COVID,0.6098678291267399,0,COVID-19,0.5166666666666667,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (780).png,2,Normal,2,Normal,0.813617730023586,2,Normal,0.7366666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1601.png,0,COVID-19,0,COVID-19,0.9935762870001404,0,COVID-19,0.8366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2551.png,0,COVID-19,1,Non-COVID,0.7048323576623388,1,Non-COVID,0.5266666666666666,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3034.png,0,COVID-19,0,COVID-19,0.9711693987746489,0,COVID-19,0.6833333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3226.png,0,COVID-19,0,COVID-19,0.8447281653385365,0,COVID-19,0.5233333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4943).png,1,Non-COVID,1,Non-COVID,0.7937712903605342,0,COVID-19,0.44666666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2626.png,0,COVID-19,0,COVID-19,0.8310893625182477,0,COVID-19,0.59,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1570).png,2,Normal,2,Normal,0.6845437403180228,2,Normal,0.5966666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1426).png,2,Normal,2,Normal,0.4060350587375607,0,COVID-19,0.5233333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_621.png,0,COVID-19,0,COVID-19,0.6802734351721417,0,COVID-19,0.6233333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4069.png,0,COVID-19,0,COVID-19,0.9917557383517379,0,COVID-19,0.6333333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10395).png,1,Non-COVID,0,COVID-19,0.4901253747264733,1,Non-COVID,0.5866666666666667,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1143.png,0,COVID-19,0,COVID-19,0.9723858409839112,0,COVID-19,0.81,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4964).png,1,Non-COVID,1,Non-COVID,0.5906588850780193,0,COVID-19,0.5966666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1365.png,0,COVID-19,0,COVID-19,0.8537403745191404,0,COVID-19,0.5633333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3263).png,1,Non-COVID,0,COVID-19,0.9459672426002633,0,COVID-19,0.6633333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (45).png,1,Non-COVID,1,Non-COVID,0.5581727790094672,0,COVID-19,0.45,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4891).png,1,Non-COVID,0,COVID-19,0.5423809060492167,0,COVID-19,0.5266666666666666,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (36).png,2,Normal,2,Normal,0.9527438691028982,2,Normal,0.6966666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2704.png,0,COVID-19,0,COVID-19,0.7304275269861026,0,COVID-19,0.4633333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (87).png,2,Normal,2,Normal,0.547316198914247,0,COVID-19,0.5466666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10244).png,2,Normal,0,COVID-19,0.4566620488010271,0,COVID-19,0.4766666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10522).png,1,Non-COVID,1,Non-COVID,0.9605267526807595,1,Non-COVID,0.5966666666666667,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_974.png,0,COVID-19,0,COVID-19,0.8506593871360265,0,COVID-19,0.6166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1571).png,2,Normal,0,COVID-19,0.5744254965157054,0,COVID-19,0.6766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3389).png,1,Non-COVID,0,COVID-19,0.9380163199811872,0,COVID-19,0.61,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2868.png,0,COVID-19,0,COVID-19,0.6113955682845675,0,COVID-19,0.5066666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3925.png,0,COVID-19,0,COVID-19,0.5921468123710194,0,COVID-19,0.5566666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2807.png,0,COVID-19,0,COVID-19,0.9678684119310328,0,COVID-19,0.75,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1162.png,0,COVID-19,0,COVID-19,0.9717150873395288,0,COVID-19,0.8533333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1535.png,0,COVID-19,0,COVID-19,0.970037376398893,0,COVID-19,0.84,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_860.png,0,COVID-19,0,COVID-19,0.8479640736586754,0,COVID-19,0.7566666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3585.png,0,COVID-19,0,COVID-19,0.9659357430914998,0,COVID-19,0.69,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (138).png,1,Non-COVID,1,Non-COVID,0.7792393947822865,1,Non-COVID,0.5633333333333334,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (156).png,1,Non-COVID,1,Non-COVID,0.5682872116137829,0,COVID-19,0.43333333333333335,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11805).png,2,Normal,2,Normal,0.5757985026710487,2,Normal,0.4033333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4343.png,0,COVID-19,0,COVID-19,0.8062386132322362,0,COVID-19,0.45666666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3402.png,0,COVID-19,0,COVID-19,0.6799316740281681,0,COVID-19,0.51,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (634).png,2,Normal,0,COVID-19,0.6690584974366665,0,COVID-19,0.6366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (54).png,1,Non-COVID,1,Non-COVID,0.8231747702389637,0,COVID-19,0.55,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3923.png,0,COVID-19,0,COVID-19,0.9958122171354733,0,COVID-19,0.9166666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1693).png,2,Normal,2,Normal,0.7447494115221012,2,Normal,0.5933333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (548).png,1,Non-COVID,1,Non-COVID,0.6691985467025928,0,COVID-19,0.52,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3385).png,1,Non-COVID,1,Non-COVID,0.9308562720120372,1,Non-COVID,0.4266666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_702.png,0,COVID-19,1,Non-COVID,0.5531231939066208,0,COVID-19,0.5566666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1705).png,2,Normal,2,Normal,0.5682970527783684,1,Non-COVID,0.3466666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4523.png,0,COVID-19,0,COVID-19,0.7682408408503134,0,COVID-19,0.6333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1534.png,0,COVID-19,0,COVID-19,0.5667688404204547,0,COVID-19,0.5933333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_317.png,0,COVID-19,0,COVID-19,0.7409355011786593,0,COVID-19,0.5666666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1523.png,0,COVID-19,0,COVID-19,0.81427044600125,0,COVID-19,0.63,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (5009).png,1,Non-COVID,0,COVID-19,0.8728246907292249,0,COVID-19,0.7166666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1954).png,2,Normal,2,Normal,0.9572639129826507,2,Normal,0.6633333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3170.png,0,COVID-19,0,COVID-19,0.9892940100990583,0,COVID-19,0.8233333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3258.png,0,COVID-19,0,COVID-19,0.9048156410596182,0,COVID-19,0.5966666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2055.png,0,COVID-19,0,COVID-19,0.5156130550301107,0,COVID-19,0.4,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2627.png,0,COVID-19,0,COVID-19,0.5980378065217045,0,COVID-19,0.73,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4381.png,0,COVID-19,0,COVID-19,0.8370493535121486,0,COVID-19,0.7866666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4405.png,0,COVID-19,0,COVID-19,0.9696166250087968,0,COVID-19,0.86,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (409).png,1,Non-COVID,1,Non-COVID,0.4577402479173918,0,COVID-19,0.5266666666666666,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1711.png,0,COVID-19,0,COVID-19,0.959332208672838,0,COVID-19,0.6433333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1319.png,0,COVID-19,0,COVID-19,0.9188569589274683,0,COVID-19,0.6233333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4932).png,1,Non-COVID,1,Non-COVID,0.49868053714777694,0,COVID-19,0.56,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11819).png,2,Normal,2,Normal,0.8981585151306707,2,Normal,0.6266666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3702.png,0,COVID-19,0,COVID-19,0.9148826329466502,0,COVID-19,0.71,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3212.png,0,COVID-19,0,COVID-19,0.8573875011732552,0,COVID-19,0.66,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3276.png,0,COVID-19,0,COVID-19,0.8587658890174072,0,COVID-19,0.6166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1226.png,0,COVID-19,0,COVID-19,0.9962268115145851,0,COVID-19,0.9366666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_32.png,0,COVID-19,0,COVID-19,0.8952900968251032,0,COVID-19,0.6933333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1574).png,2,Normal,2,Normal,0.7781652306388467,2,Normal,0.6766666666666666,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1428.png,0,COVID-19,0,COVID-19,0.7042487657011045,0,COVID-19,0.4533333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1178.png,0,COVID-19,2,Normal,0.873634031033594,2,Normal,0.53,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1020.png,0,COVID-19,0,COVID-19,0.8451028740106056,0,COVID-19,0.6066666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10544).png,1,Non-COVID,1,Non-COVID,0.7764317926912151,1,Non-COVID,0.6166666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (496).png,1,Non-COVID,0,COVID-19,0.8467324608346267,0,COVID-19,0.5733333333333334,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11768).png,2,Normal,2,Normal,0.9662007346989502,2,Normal,0.69,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11975).png,2,Normal,2,Normal,0.882686857787736,2,Normal,0.7766666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11141).png,1,Non-COVID,1,Non-COVID,0.968309818085968,1,Non-COVID,0.6133333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10545).png,1,Non-COVID,1,Non-COVID,0.8659986768208755,1,Non-COVID,0.5633333333333334,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1502.png,0,COVID-19,0,COVID-19,0.6783473723132771,0,COVID-19,0.5733333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (564).png,1,Non-COVID,0,COVID-19,0.5531292662358178,0,COVID-19,0.5266666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_931.png,0,COVID-19,0,COVID-19,0.5282869553433289,2,Normal,0.41,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2041.png,0,COVID-19,0,COVID-19,0.9818648874523747,0,COVID-19,0.61,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1594).png,2,Normal,2,Normal,0.5692974753780944,2,Normal,0.57,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1757.png,0,COVID-19,0,COVID-19,0.9807029751425289,0,COVID-19,0.7466666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2160.png,0,COVID-19,0,COVID-19,0.7444267729131259,0,COVID-19,0.7366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2400.png,0,COVID-19,0,COVID-19,0.8638048527135022,0,COVID-19,0.5966666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (503).png,1,Non-COVID,0,COVID-19,0.7395823266022185,0,COVID-19,0.6833333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_804.png,0,COVID-19,0,COVID-19,0.9913453819225605,0,COVID-19,0.9,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3341).png,1,Non-COVID,2,Normal,0.5926984945744952,0,COVID-19,0.43666666666666665,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (162).png,1,Non-COVID,2,Normal,0.8517130788618582,2,Normal,0.6533333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (12000).png,2,Normal,2,Normal,0.45712835680319835,1,Non-COVID,0.42333333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (721).png,2,Normal,1,Non-COVID,0.5719919654922131,0,COVID-19,0.4533333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2053).png,2,Normal,2,Normal,0.7821329501030246,0,COVID-19,0.37,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2565.png,0,COVID-19,0,COVID-19,0.5340368947821191,0,COVID-19,0.6466666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10456).png,1,Non-COVID,1,Non-COVID,0.9997060182176652,1,Non-COVID,0.83,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1288.png,0,COVID-19,0,COVID-19,0.8479811748946855,0,COVID-19,0.5966666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3718.png,0,COVID-19,0,COVID-19,0.9545623139969478,0,COVID-19,0.72,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3965.png,0,COVID-19,0,COVID-19,0.6431659721421986,2,Normal,0.5566666666666666,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (177).png,2,Normal,2,Normal,0.6324743532717293,0,COVID-19,0.49,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (148).png,1,Non-COVID,1,Non-COVID,0.7240999849466878,0,COVID-19,0.5233333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4905).png,1,Non-COVID,0,COVID-19,0.5317965678508398,0,COVID-19,0.5,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10600).png,1,Non-COVID,2,Normal,0.5779735392623956,0,COVID-19,0.41333333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_207.png,0,COVID-19,0,COVID-19,0.7243880620819131,0,COVID-19,0.5633333333333334,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1060.png,0,COVID-19,0,COVID-19,0.9035469634200459,0,COVID-19,0.72,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1090.png,0,COVID-19,0,COVID-19,0.9260354269094019,0,COVID-19,0.56,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3926.png,0,COVID-19,0,COVID-19,0.9350857357132731,0,COVID-19,0.7966666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1756.png,0,COVID-19,0,COVID-19,0.9777938905928916,0,COVID-19,0.7533333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3869.png,0,COVID-19,1,Non-COVID,0.5841777280923477,0,COVID-19,0.51,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2984.png,0,COVID-19,0,COVID-19,0.7046655747290221,0,COVID-19,0.8266666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_627.png,0,COVID-19,0,COVID-19,0.8690785946324556,0,COVID-19,0.5366666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11995).png,2,Normal,2,Normal,0.9659049855136995,2,Normal,0.7933333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11145).png,1,Non-COVID,1,Non-COVID,0.7911622205556726,1,Non-COVID,0.55,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (446).png,1,Non-COVID,0,COVID-19,0.6710873955670359,2,Normal,0.42333333333333334,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3193.png,0,COVID-19,2,Normal,0.585088931887898,2,Normal,0.49,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1530).png,2,Normal,2,Normal,0.9528328966938407,2,Normal,0.77,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1586).png,2,Normal,0,COVID-19,0.5081363217446074,0,COVID-19,0.48,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11927).png,2,Normal,2,Normal,0.6735535967247954,2,Normal,0.5466666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2434.png,0,COVID-19,0,COVID-19,0.5614710117919323,0,COVID-19,0.56,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3272.png,0,COVID-19,0,COVID-19,0.8851157202220469,0,COVID-19,0.5833333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10255).png,2,Normal,2,Normal,0.7807086641380065,2,Normal,0.7266666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3230.png,0,COVID-19,0,COVID-19,0.9753427820046628,0,COVID-19,0.6966666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1639.png,0,COVID-19,0,COVID-19,0.34644537937973074,1,Non-COVID,0.35,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1957).png,2,Normal,1,Non-COVID,0.5222047747724833,0,COVID-19,0.5566666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1815).png,2,Normal,2,Normal,0.9143545523126199,2,Normal,0.7166666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1671).png,2,Normal,2,Normal,0.8738850363884786,2,Normal,0.5233333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10577).png,1,Non-COVID,1,Non-COVID,0.9629778255436228,1,Non-COVID,0.65,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10334).png,1,Non-COVID,1,Non-COVID,0.9697114522345704,1,Non-COVID,0.6533333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_264.png,0,COVID-19,0,COVID-19,0.9852181362411678,0,COVID-19,0.6766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11866).png,2,Normal,2,Normal,0.9450667031536645,2,Normal,0.78,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4153.png,0,COVID-19,0,COVID-19,0.9578393602645325,0,COVID-19,0.85,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (33).png,2,Normal,2,Normal,0.6893964353401366,0,COVID-19,0.41333333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1928).png,2,Normal,2,Normal,0.9384129307970479,2,Normal,0.6933333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1956).png,2,Normal,2,Normal,0.8989251187313783,2,Normal,0.42333333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10312).png,1,Non-COVID,1,Non-COVID,0.7523818356041518,1,Non-COVID,0.39,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11131).png,1,Non-COVID,1,Non-COVID,0.9690266520024315,1,Non-COVID,0.6733333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_635.png,0,COVID-19,0,COVID-19,0.847999397032461,0,COVID-19,0.6466666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (395).png,1,Non-COVID,1,Non-COVID,0.5414432481840415,0,COVID-19,0.5033333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_717.png,0,COVID-19,0,COVID-19,0.9153609178736485,0,COVID-19,0.6666666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_980.png,0,COVID-19,0,COVID-19,0.5239882867412612,0,COVID-19,0.56,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1481.png,0,COVID-19,0,COVID-19,0.9979883716565928,0,COVID-19,0.96,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (67).png,1,Non-COVID,2,Normal,0.8962513347654663,2,Normal,0.5033333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4062.png,0,COVID-19,0,COVID-19,0.6237232423901673,0,COVID-19,0.49,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11874).png,2,Normal,2,Normal,0.9999872332190162,2,Normal,0.8,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1752).png,2,Normal,2,Normal,0.8786381968474618,2,Normal,0.49333333333333335,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_62.png,0,COVID-19,0,COVID-19,0.3655053650558498,0,COVID-19,0.38666666666666666,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11888).png,2,Normal,2,Normal,0.9857320220798205,2,Normal,0.8366666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3052.png,0,COVID-19,0,COVID-19,0.9019173969647032,0,COVID-19,0.8566666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3357).png,1,Non-COVID,1,Non-COVID,0.7968374600803325,0,COVID-19,0.5633333333333334,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_570.png,0,COVID-19,0,COVID-19,0.5560240051596714,0,COVID-19,0.5733333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10401).png,1,Non-COVID,1,Non-COVID,0.986295615174973,1,Non-COVID,0.6166666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1882.png,0,COVID-19,0,COVID-19,0.947222041381253,0,COVID-19,0.52,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3359).png,1,Non-COVID,1,Non-COVID,0.9170097184253486,0,COVID-19,0.5,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4495.png,0,COVID-19,0,COVID-19,0.9995750577116166,0,COVID-19,0.8266666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4006.png,0,COVID-19,0,COVID-19,0.9633977570487029,0,COVID-19,0.67,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10463).png,1,Non-COVID,0,COVID-19,0.6176324790349985,0,COVID-19,0.48333333333333334,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (150).png,2,Normal,2,Normal,0.9393274123228675,2,Normal,0.66,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (175).png,1,Non-COVID,1,Non-COVID,0.7457097660647137,0,COVID-19,0.5466666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4549.png,0,COVID-19,0,COVID-19,0.999750018549298,0,COVID-19,0.97,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_69.png,0,COVID-19,0,COVID-19,0.9953145874159134,0,COVID-19,0.8466666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1545).png,2,Normal,2,Normal,0.8628730430435729,2,Normal,0.7366666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_344.png,0,COVID-19,2,Normal,0.8503395158292482,2,Normal,0.66,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1626.png,0,COVID-19,0,COVID-19,0.5398042051135536,0,COVID-19,0.6966666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3366.png,0,COVID-19,0,COVID-19,0.9381293972437694,0,COVID-19,0.8033333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3097.png,0,COVID-19,1,Non-COVID,0.5343136935513618,0,COVID-19,0.49333333333333335,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2732.png,0,COVID-19,0,COVID-19,0.9826706085177951,0,COVID-19,0.7833333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2395.png,0,COVID-19,0,COVID-19,0.9796347713406024,0,COVID-19,0.79,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_249.png,0,COVID-19,0,COVID-19,0.9327573921794067,0,COVID-19,0.6,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (239).png,1,Non-COVID,0,COVID-19,0.6868361769727226,0,COVID-19,0.5566666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_784.png,0,COVID-19,0,COVID-19,0.4963802344203016,0,COVID-19,0.6166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11124).png,1,Non-COVID,1,Non-COVID,0.931335968916092,1,Non-COVID,0.58,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1723).png,2,Normal,2,Normal,0.5634280176993617,2,Normal,0.6033333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (303).png,1,Non-COVID,0,COVID-19,0.903711046532023,0,COVID-19,0.8166666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11831).png,2,Normal,2,Normal,0.9350788859670163,2,Normal,0.5966666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1511.png,0,COVID-19,0,COVID-19,0.9018451450178265,0,COVID-19,0.7933333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2121.png,0,COVID-19,0,COVID-19,0.9945979059284665,0,COVID-19,0.93,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2634.png,0,COVID-19,0,COVID-19,0.8089975770369658,0,COVID-19,0.5733333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10373).png,1,Non-COVID,1,Non-COVID,0.9826506541355934,1,Non-COVID,0.6666666666666666,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_665.png,0,COVID-19,1,Non-COVID,0.5205261765071332,0,COVID-19,0.4066666666666667,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1602).png,2,Normal,2,Normal,0.8977062965653126,2,Normal,0.7633333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3266).png,1,Non-COVID,2,Normal,0.756122872978256,2,Normal,0.6266666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11966).png,1,Non-COVID,1,Non-COVID,0.9855033805282576,1,Non-COVID,0.79,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2062).png,2,Normal,2,Normal,0.8614553912718029,2,Normal,0.75,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (197).png,2,Normal,2,Normal,0.5142840730156161,2,Normal,0.42333333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2106).png,2,Normal,0,COVID-19,0.5553220904465004,0,COVID-19,0.52,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1810).png,2,Normal,2,Normal,0.5637997877332391,0,COVID-19,0.45666666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11167).png,1,Non-COVID,1,Non-COVID,0.6257254151043222,0,COVID-19,0.4166666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1463).png,2,Normal,2,Normal,0.9131774617480146,2,Normal,0.6666666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (558).png,1,Non-COVID,0,COVID-19,0.5535651983314231,1,Non-COVID,0.45,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_779.png,0,COVID-19,0,COVID-19,0.8195249408107891,0,COVID-19,0.6133333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1430).png,2,Normal,2,Normal,0.9754817722771847,2,Normal,0.6666666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10455).png,1,Non-COVID,1,Non-COVID,0.9726771844498547,1,Non-COVID,0.61,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11992).png,1,Non-COVID,1,Non-COVID,0.9942207035101283,1,Non-COVID,0.81,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1524.png,0,COVID-19,0,COVID-19,0.9747325434440539,0,COVID-19,0.7033333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11921).png,1,Non-COVID,1,Non-COVID,0.8027108140147763,1,Non-COVID,0.6266666666666667,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3116.png,0,COVID-19,0,COVID-19,0.9845129588731834,0,COVID-19,0.7333333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4237.png,0,COVID-19,0,COVID-19,0.997139417584298,0,COVID-19,0.8833333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1620.png,0,COVID-19,0,COVID-19,0.8788839910832482,0,COVID-19,0.71,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_800.png,0,COVID-19,0,COVID-19,0.8582901162969603,0,COVID-19,0.78,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1488.png,0,COVID-19,1,Non-COVID,0.7030124688865669,0,COVID-19,0.5633333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11813).png,2,Normal,2,Normal,0.9332588541664214,2,Normal,0.6333333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2611.png,0,COVID-19,0,COVID-19,0.9821289095359244,0,COVID-19,0.6066666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3806.png,0,COVID-19,0,COVID-19,0.9887586315280538,0,COVID-19,0.8633333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1894.png,0,COVID-19,0,COVID-19,0.9004900201382542,0,COVID-19,0.7733333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1844.png,0,COVID-19,0,COVID-19,0.9073009967214872,0,COVID-19,0.6466666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (26).png,1,Non-COVID,0,COVID-19,0.505531079521385,0,COVID-19,0.5433333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (673).png,2,Normal,2,Normal,0.9198196170062433,2,Normal,0.71,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (618).png,2,Normal,2,Normal,0.9534483386643746,2,Normal,0.69,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11940).png,2,Normal,2,Normal,0.9036735940870169,2,Normal,0.5766666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4390.png,0,COVID-19,0,COVID-19,0.7976579607404833,0,COVID-19,0.6066666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1462).png,2,Normal,2,Normal,0.4797606698565416,2,Normal,0.35,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3406.png,0,COVID-19,0,COVID-19,0.9222825364044842,0,COVID-19,0.6866666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1577).png,2,Normal,1,Non-COVID,0.5773583055158266,0,COVID-19,0.61,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3778.png,0,COVID-19,0,COVID-19,0.9848431078998049,0,COVID-19,0.6633333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11982).png,2,Normal,2,Normal,0.9913954742421487,2,Normal,0.7366666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3379.png,0,COVID-19,0,COVID-19,0.9288125783666966,0,COVID-19,0.5566666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1813).png,2,Normal,2,Normal,0.3944866860865893,0,COVID-19,0.41,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3954.png,0,COVID-19,0,COVID-19,0.9497266776248403,0,COVID-19,0.7766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1654).png,2,Normal,2,Normal,0.848316717850308,0,COVID-19,0.48333333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (339).png,1,Non-COVID,0,COVID-19,0.919650301763791,0,COVID-19,0.7133333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_363.png,0,COVID-19,0,COVID-19,0.7400682404556075,0,COVID-19,0.53,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3074.png,0,COVID-19,0,COVID-19,0.9973626725397674,0,COVID-19,0.9166666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_331.png,0,COVID-19,0,COVID-19,0.9961198085101651,0,COVID-19,0.88,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4983).png,1,Non-COVID,1,Non-COVID,0.594957002352112,0,COVID-19,0.67,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (629).png,2,Normal,2,Normal,0.7721252946470343,2,Normal,0.43,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (39).png,2,Normal,2,Normal,0.6489417218067387,0,COVID-19,0.55,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10595).png,1,Non-COVID,1,Non-COVID,0.6641416250789135,1,Non-COVID,0.5466666666666666,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3831.png,0,COVID-19,0,COVID-19,0.9400219326866261,0,COVID-19,0.6333333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1854).png,2,Normal,0,COVID-19,0.3428897992028138,0,COVID-19,0.5133333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2326.png,0,COVID-19,0,COVID-19,0.9781347937159063,0,COVID-19,0.8366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2436.png,0,COVID-19,0,COVID-19,0.5774318109009197,0,COVID-19,0.5233333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3171.png,0,COVID-19,0,COVID-19,0.9569732280991038,0,COVID-19,0.8166666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2680.png,0,COVID-19,0,COVID-19,0.9832899149329063,0,COVID-19,0.7933333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (734).png,2,Normal,2,Normal,0.8719143830932478,2,Normal,0.6566666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1630).png,2,Normal,0,COVID-19,0.7850617092029399,0,COVID-19,0.5733333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (385).png,1,Non-COVID,0,COVID-19,0.48905921616061315,0,COVID-19,0.55,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2278.png,0,COVID-19,1,Non-COVID,0.6626696660151192,0,COVID-19,0.5833333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1628).png,2,Normal,2,Normal,0.5974512640085181,0,COVID-19,0.5166666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (208).png,2,Normal,0,COVID-19,0.9301772044906963,0,COVID-19,0.7266666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2034).png,2,Normal,2,Normal,0.6925939440871135,0,COVID-19,0.49333333333333335,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1613).png,2,Normal,2,Normal,0.9618608059074569,2,Normal,0.81,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11972).png,1,Non-COVID,1,Non-COVID,0.8772126036865772,1,Non-COVID,0.46,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3266.png,0,COVID-19,0,COVID-19,0.9907088630899267,0,COVID-19,0.9366666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (352).png,1,Non-COVID,0,COVID-19,0.7116210062161913,0,COVID-19,0.48,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3022.png,0,COVID-19,0,COVID-19,0.5985101564557368,0,COVID-19,0.6233333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11835).png,2,Normal,2,Normal,0.9875391888755584,2,Normal,0.88,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1656).png,2,Normal,0,COVID-19,0.8859229650709569,0,COVID-19,0.6666666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (619).png,2,Normal,2,Normal,0.5805142423754022,0,COVID-19,0.47,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3524.png,0,COVID-19,0,COVID-19,0.7261348807110947,0,COVID-19,0.5533333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3689.png,0,COVID-19,2,Normal,0.5664145815747217,2,Normal,0.6,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11168).png,1,Non-COVID,2,Normal,0.5019147554435527,1,Non-COVID,0.59,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1440.png,0,COVID-19,0,COVID-19,0.9928938664314085,0,COVID-19,0.9466666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1701.png,0,COVID-19,0,COVID-19,0.5068579931777005,0,COVID-19,0.6,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11886).png,2,Normal,2,Normal,0.9009814732183437,2,Normal,0.6766666666666666,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1936).png,2,Normal,2,Normal,0.46754146213099296,0,COVID-19,0.3933333333333333,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4094.png,0,COVID-19,0,COVID-19,0.8813882729444801,0,COVID-19,0.57,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_360.png,0,COVID-19,0,COVID-19,0.9215276239769804,0,COVID-19,0.5866666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3287).png,1,Non-COVID,1,Non-COVID,0.9840184910927431,0,COVID-19,0.5233333333333333,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1587.png,0,COVID-19,0,COVID-19,0.6497619301231986,0,COVID-19,0.47,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (65).png,1,Non-COVID,1,Non-COVID,0.5579292851193544,0,COVID-19,0.47333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1239.png,0,COVID-19,0,COVID-19,0.9990848668659484,0,COVID-19,0.9233333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (110).png,2,Normal,2,Normal,0.6658633606821962,2,Normal,0.5066666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11772).png,2,Normal,2,Normal,0.8303746779557964,2,Normal,0.6,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4571.png,0,COVID-19,0,COVID-19,0.952825292411348,0,COVID-19,0.79,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (157).png,1,Non-COVID,1,Non-COVID,0.6798055516602212,0,COVID-19,0.44333333333333336,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (172).png,1,Non-COVID,1,Non-COVID,0.9676600747774505,0,COVID-19,0.5566666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1549).png,2,Normal,2,Normal,0.8777737709377846,2,Normal,0.47,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_1948.png,0,COVID-19,0,COVID-19,0.513794670323676,0,COVID-19,0.5666666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4443.png,0,COVID-19,0,COVID-19,0.984075032065786,0,COVID-19,0.6133333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1128.png,0,COVID-19,0,COVID-19,0.8642314539922926,0,COVID-19,0.59,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2107.png,0,COVID-19,0,COVID-19,0.9753805635766181,0,COVID-19,0.8533333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (190).png,2,Normal,0,COVID-19,0.38243510024736,0,COVID-19,0.52,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1751).png,2,Normal,2,Normal,0.7832225586596161,2,Normal,0.56,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1880).png,2,Normal,1,Non-COVID,0.5223044893031044,0,COVID-19,0.4766666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_210.png,0,COVID-19,2,Normal,0.403408882649912,0,COVID-19,0.44333333333333336,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (39).png,1,Non-COVID,1,Non-COVID,0.5824212537963993,0,COVID-19,0.45666666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2023).png,2,Normal,2,Normal,0.890434399460975,0,COVID-19,0.42333333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_711.png,0,COVID-19,0,COVID-19,0.8136152825919379,0,COVID-19,0.5833333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3290).png,1,Non-COVID,1,Non-COVID,0.6339047666445012,0,COVID-19,0.71,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1775.png,0,COVID-19,0,COVID-19,0.7901953279276936,0,COVID-19,0.8266666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1729.png,0,COVID-19,0,COVID-19,0.9951053226866261,0,COVID-19,0.86,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2151.png,0,COVID-19,0,COVID-19,0.6588742767769973,0,COVID-19,0.5533333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_131.png,0,COVID-19,0,COVID-19,0.6172603924043213,0,COVID-19,0.74,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3556.png,0,COVID-19,0,COVID-19,0.9389707050855711,0,COVID-19,0.6666666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2086.png,0,COVID-19,0,COVID-19,0.9950990074466749,0,COVID-19,0.8366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3388.png,0,COVID-19,0,COVID-19,0.9107686920908603,0,COVID-19,0.6233333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_594.png,0,COVID-19,0,COVID-19,0.7295340713625624,0,COVID-19,0.7066666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (657).png,1,Non-COVID,1,Non-COVID,0.652983532874285,0,COVID-19,0.48333333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4045.png,0,COVID-19,0,COVID-19,0.783617608038404,0,COVID-19,0.6666666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1542).png,2,Normal,2,Normal,0.8708754557015679,2,Normal,0.53,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2721.png,0,COVID-19,0,COVID-19,0.9302045791653748,2,Normal,0.48333333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10252).png,2,Normal,2,Normal,0.8618105629271845,0,COVID-19,0.35333333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1596).png,2,Normal,2,Normal,0.7989312304690995,2,Normal,0.6933333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (432).png,1,Non-COVID,0,COVID-19,0.5261318868205689,0,COVID-19,0.6033333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2229.png,0,COVID-19,0,COVID-19,0.9981823420611605,0,COVID-19,0.7866666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2878.png,0,COVID-19,0,COVID-19,0.9942527457684258,0,COVID-19,0.82,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2455.png,0,COVID-19,0,COVID-19,0.768043356685788,0,COVID-19,0.47333333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2090).png,2,Normal,1,Non-COVID,0.5980422526235966,0,COVID-19,0.49333333333333335,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10445).png,1,Non-COVID,1,Non-COVID,0.708159192098391,2,Normal,0.45,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11992).png,2,Normal,2,Normal,0.9767832741190199,2,Normal,0.8233333333333334,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2355.png,0,COVID-19,1,Non-COVID,0.9359241145837598,0,COVID-19,0.6333333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1851).png,2,Normal,2,Normal,0.9642036141078185,2,Normal,0.44,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1909).png,2,Normal,2,Normal,0.8437161439956071,2,Normal,0.48333333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10321).png,1,Non-COVID,1,Non-COVID,0.9951020941856212,1,Non-COVID,0.78,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1865.png,0,COVID-19,0,COVID-19,0.9944050850136352,0,COVID-19,0.7333333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (152).png,1,Non-COVID,2,Normal,0.9088949261894528,2,Normal,0.56,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3328).png,1,Non-COVID,1,Non-COVID,0.8591398036805968,0,COVID-19,0.48333333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2208.png,0,COVID-19,0,COVID-19,0.6281490588422147,0,COVID-19,0.47333333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1531).png,2,Normal,2,Normal,0.9768222072174787,2,Normal,0.7266666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (522).png,1,Non-COVID,1,Non-COVID,0.8110425468770228,0,COVID-19,0.51,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (257).png,1,Non-COVID,0,COVID-19,0.8667292159053593,0,COVID-19,0.67,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (452).png,1,Non-COVID,0,COVID-19,0.7183288924388987,0,COVID-19,0.5733333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_740.png,0,COVID-19,1,Non-COVID,0.5902410499192617,0,COVID-19,0.5466666666666666,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4143.png,0,COVID-19,0,COVID-19,0.9777125670720732,0,COVID-19,0.6366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_492.png,0,COVID-19,0,COVID-19,0.9743647270284495,0,COVID-19,0.9,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10509).png,1,Non-COVID,1,Non-COVID,0.9882781079334323,1,Non-COVID,0.7333333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (707).png,2,Normal,2,Normal,0.5332526522995301,0,COVID-19,0.48,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1684).png,2,Normal,2,Normal,0.9130459653090386,2,Normal,0.43666666666666665,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10260).png,2,Normal,2,Normal,0.8593833037058378,0,COVID-19,0.42,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_128.png,0,COVID-19,0,COVID-19,0.885639570709361,0,COVID-19,0.7166666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3400).png,1,Non-COVID,0,COVID-19,0.6447193807626691,0,COVID-19,0.7233333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4913).png,1,Non-COVID,0,COVID-19,0.6602069121171711,0,COVID-19,0.5733333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1871.png,0,COVID-19,0,COVID-19,0.7745413102102733,0,COVID-19,0.5833333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_442.png,0,COVID-19,0,COVID-19,0.9467357372921938,0,COVID-19,0.8066666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3046.png,0,COVID-19,0,COVID-19,0.9571348164458545,0,COVID-19,0.6466666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2261.png,0,COVID-19,0,COVID-19,0.9874510833696937,0,COVID-19,0.8666666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3108.png,0,COVID-19,0,COVID-19,0.9927053080150732,0,COVID-19,0.6633333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (714).png,2,Normal,2,Normal,0.6012715241552674,0,COVID-19,0.52,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2009).png,2,Normal,2,Normal,0.81982338951215,2,Normal,0.57,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_749.png,0,COVID-19,0,COVID-19,0.45404123285312714,0,COVID-19,0.5333333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_875.png,0,COVID-19,1,Non-COVID,0.5609059374136729,0,COVID-19,0.5733333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3852.png,0,COVID-19,0,COVID-19,0.9586419036129047,0,COVID-19,0.7033333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1687.png,0,COVID-19,0,COVID-19,0.5006704112322261,0,COVID-19,0.5966666666666667,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10354).png,1,Non-COVID,1,Non-COVID,0.7749678934973399,1,Non-COVID,0.47333333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (99).png,1,Non-COVID,0,COVID-19,0.7845621342831792,0,COVID-19,0.53,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_1914.png,0,COVID-19,0,COVID-19,0.9980159665855913,0,COVID-19,0.9133333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11906).png,1,Non-COVID,1,Non-COVID,0.8320405920399652,1,Non-COVID,0.5733333333333334,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (159).png,1,Non-COVID,0,COVID-19,0.5732286198406771,0,COVID-19,0.5733333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3878.png,0,COVID-19,0,COVID-19,0.9657508602581395,0,COVID-19,0.6433333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4130.png,0,COVID-19,0,COVID-19,0.7482893938017126,0,COVID-19,0.5466666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1422.png,0,COVID-19,0,COVID-19,0.9888845001895858,0,COVID-19,0.7933333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (119).png,2,Normal,2,Normal,0.9254250171915877,2,Normal,0.7733333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (633).png,1,Non-COVID,1,Non-COVID,0.6426920651892017,0,COVID-19,0.5033333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2834.png,0,COVID-19,0,COVID-19,0.9241936353906357,0,COVID-19,0.82,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3930.png,0,COVID-19,0,COVID-19,0.8758698565052292,0,COVID-19,0.7866666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4226.png,0,COVID-19,0,COVID-19,0.9658926756849477,0,COVID-19,0.84,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4051.png,0,COVID-19,0,COVID-19,0.6777003347164284,0,COVID-19,0.7266666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10324).png,1,Non-COVID,1,Non-COVID,0.9843674532021215,1,Non-COVID,0.59,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3467.png,0,COVID-19,0,COVID-19,0.916120006943157,0,COVID-19,0.6833333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1438.png,0,COVID-19,0,COVID-19,0.4833020627188223,2,Normal,0.43333333333333335,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1606).png,2,Normal,2,Normal,0.9565592547883809,2,Normal,0.5,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_858.png,0,COVID-19,0,COVID-19,0.9259056396964811,0,COVID-19,0.8333333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (777).png,2,Normal,2,Normal,0.8338533711852345,2,Normal,0.57,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1607).png,2,Normal,2,Normal,0.6641938221856719,2,Normal,0.45,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_701.png,0,COVID-19,0,COVID-19,0.974479315357419,0,COVID-19,0.6766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1279.png,0,COVID-19,0,COVID-19,0.9757881783542723,0,COVID-19,0.7366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1622).png,2,Normal,2,Normal,0.6226365889912133,2,Normal,0.71,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1837.png,0,COVID-19,0,COVID-19,0.5159841687486594,0,COVID-19,0.69,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3700.png,0,COVID-19,0,COVID-19,0.7801398233192356,0,COVID-19,0.48333333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11983).png,2,Normal,2,Normal,0.8042727945987486,2,Normal,0.6333333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4058.png,0,COVID-19,0,COVID-19,0.9052275925082973,0,COVID-19,0.7066666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3421).png,1,Non-COVID,1,Non-COVID,0.9105975412645353,0,COVID-19,0.48,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (176).png,2,Normal,2,Normal,0.9716439212641864,2,Normal,0.7433333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_603.png,0,COVID-19,0,COVID-19,0.9837556330258487,0,COVID-19,0.68,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3580.png,0,COVID-19,0,COVID-19,0.8503708035656266,0,COVID-19,0.5,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (521).png,1,Non-COVID,1,Non-COVID,0.7757816416612728,0,COVID-19,0.52,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4980).png,1,Non-COVID,1,Non-COVID,0.8253956927939553,0,COVID-19,0.6033333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3536.png,0,COVID-19,0,COVID-19,0.8620220095888618,0,COVID-19,0.5533333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_322.png,0,COVID-19,0,COVID-19,0.44320417827898484,0,COVID-19,0.44,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1825).png,2,Normal,2,Normal,0.7572453711049876,2,Normal,0.51,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1477.png,0,COVID-19,0,COVID-19,0.9817933936245249,0,COVID-19,0.7233333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (186).png,1,Non-COVID,1,Non-COVID,0.6891134695029,0,COVID-19,0.44333333333333336,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (369).png,1,Non-COVID,2,Normal,0.6332912908975886,2,Normal,0.47,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4158.png,0,COVID-19,0,COVID-19,0.9876744676208556,0,COVID-19,0.74,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1397.png,0,COVID-19,0,COVID-19,0.9953314012432003,0,COVID-19,0.9333333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3320.png,0,COVID-19,0,COVID-19,0.9916402135820771,0,COVID-19,0.7066666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3027.png,0,COVID-19,0,COVID-19,0.634529610357701,0,COVID-19,0.53,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11954).png,1,Non-COVID,1,Non-COVID,0.8694451467741336,1,Non-COVID,0.54,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1411.png,0,COVID-19,0,COVID-19,0.8852965174387604,0,COVID-19,0.5966666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (474).png,1,Non-COVID,0,COVID-19,0.9596339356715465,0,COVID-19,0.61,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (147).png,1,Non-COVID,1,Non-COVID,0.63886516749209,0,COVID-19,0.49333333333333335,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11952).png,2,Normal,0,COVID-19,0.7744524322405983,2,Normal,0.4533333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1806).png,2,Normal,2,Normal,0.9756566651784672,2,Normal,0.69,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2318.png,0,COVID-19,0,COVID-19,0.8792613422902872,0,COVID-19,0.6,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (481).png,1,Non-COVID,0,COVID-19,0.45767924627220025,0,COVID-19,0.5333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2390.png,0,COVID-19,0,COVID-19,0.9139640091489131,0,COVID-19,0.5666666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_614.png,0,COVID-19,0,COVID-19,0.9773607813422955,0,COVID-19,0.81,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (62).png,1,Non-COVID,1,Non-COVID,0.8331088932046501,0,COVID-19,0.47333333333333333,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1640.png,0,COVID-19,0,COVID-19,0.9818554436804989,0,COVID-19,0.9266666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1673).png,2,Normal,0,COVID-19,0.4742320849754289,0,COVID-19,0.5166666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (724).png,2,Normal,0,COVID-19,0.5927687652586967,0,COVID-19,0.56,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3134.png,0,COVID-19,0,COVID-19,0.9800217339585937,0,COVID-19,0.6633333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1769).png,2,Normal,2,Normal,0.8643832171580192,0,COVID-19,0.4,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2101).png,2,Normal,1,Non-COVID,0.5272736626472748,0,COVID-19,0.4633333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (9702).png,2,Normal,2,Normal,0.9843890133960641,2,Normal,0.8466666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2664.png,0,COVID-19,0,COVID-19,0.8727385899961891,0,COVID-19,0.6666666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (11).png,1,Non-COVID,0,COVID-19,0.6606625559048546,0,COVID-19,0.5433333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_1999.png,0,COVID-19,0,COVID-19,0.8607268470390095,0,COVID-19,0.5066666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4909).png,1,Non-COVID,0,COVID-19,0.7997549726689369,0,COVID-19,0.6,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1479.png,0,COVID-19,0,COVID-19,0.9939272879384746,0,COVID-19,0.68,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (8).png,1,Non-COVID,0,COVID-19,0.8865642023793295,0,COVID-19,0.65,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2077).png,2,Normal,2,Normal,0.8303746755129431,2,Normal,0.5833333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4953).png,1,Non-COVID,1,Non-COVID,0.8180759299563696,0,COVID-19,0.5333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2046).png,2,Normal,0,COVID-19,0.5428390839749764,0,COVID-19,0.49666666666666665,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3945.png,0,COVID-19,0,COVID-19,0.9998129924338411,0,COVID-19,0.96,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3430).png,1,Non-COVID,0,COVID-19,0.5480023768206316,0,COVID-19,0.49666666666666665,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2576.png,0,COVID-19,0,COVID-19,0.9311854242555487,0,COVID-19,0.63,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_100.png,0,COVID-19,0,COVID-19,0.48693397201623406,0,COVID-19,0.6133333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (274).png,1,Non-COVID,1,Non-COVID,0.4612228766440906,0,COVID-19,0.5033333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (61).png,1,Non-COVID,1,Non-COVID,0.6730154055724622,0,COVID-19,0.4766666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (200).png,1,Non-COVID,2,Normal,0.9707649009958002,2,Normal,0.5933333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2494.png,0,COVID-19,0,COVID-19,0.8960627268067635,0,COVID-19,0.5866666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3620.png,0,COVID-19,0,COVID-19,0.9226208898600805,0,COVID-19,0.6533333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3815.png,0,COVID-19,0,COVID-19,0.6796682897804179,0,COVID-19,0.7233333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (3).png,1,Non-COVID,1,Non-COVID,0.9535992267496273,0,COVID-19,0.5666666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4028.png,0,COVID-19,0,COVID-19,0.978027722783108,0,COVID-19,0.72,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1550.png,0,COVID-19,0,COVID-19,0.9280285527144756,0,COVID-19,0.6333333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3332).png,1,Non-COVID,1,Non-COVID,0.9554803096321928,1,Non-COVID,0.4633333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3805.png,0,COVID-19,0,COVID-19,0.9555409482986968,0,COVID-19,0.81,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (170).png,2,Normal,0,COVID-19,0.49575460399994276,2,Normal,0.5566666666666666,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1885).png,2,Normal,0,COVID-19,0.4967734926658618,0,COVID-19,0.5466666666666666,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (52).png,1,Non-COVID,0,COVID-19,0.9230388055363671,0,COVID-19,0.73,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1456).png,2,Normal,2,Normal,0.8735677878797509,2,Normal,0.5133333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3338).png,1,Non-COVID,2,Normal,0.8213558322667306,2,Normal,0.5733333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1922).png,2,Normal,2,Normal,0.963244941991638,2,Normal,0.7033333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1900).png,2,Normal,2,Normal,0.9842209397903371,2,Normal,0.65,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2514.png,0,COVID-19,0,COVID-19,0.9563500994964274,0,COVID-19,0.7633333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (386).png,1,Non-COVID,0,COVID-19,0.6562449748332214,0,COVID-19,0.6166666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_870.png,0,COVID-19,0,COVID-19,0.9822008019355599,0,COVID-19,0.6166666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1818).png,2,Normal,2,Normal,0.9518015996204703,2,Normal,0.7566666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_1983.png,0,COVID-19,0,COVID-19,0.9011853978672691,0,COVID-19,0.6966666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3546.png,0,COVID-19,0,COVID-19,0.9160096010058163,0,COVID-19,0.6766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4552.png,0,COVID-19,2,Normal,0.5505499475825992,0,COVID-19,0.47333333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1556).png,2,Normal,2,Normal,0.960518186084995,2,Normal,0.5633333333333334,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4489.png,0,COVID-19,0,COVID-19,0.6613475546406709,0,COVID-19,0.5133333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11961).png,2,Normal,2,Normal,0.986206871437223,2,Normal,0.9133333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (122).png,2,Normal,2,Normal,0.829467029896821,2,Normal,0.5466666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3101.png,0,COVID-19,0,COVID-19,0.8404310990028168,0,COVID-19,0.6766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_293.png,0,COVID-19,1,Non-COVID,0.6234053586566921,0,COVID-19,0.44,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11985).png,1,Non-COVID,1,Non-COVID,0.9827018975715938,1,Non-COVID,0.6833333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (104).png,1,Non-COVID,2,Normal,0.8365211317422527,2,Normal,0.43,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10249).png,2,Normal,0,COVID-19,0.3699572425700113,2,Normal,0.56,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (96).png,1,Non-COVID,1,Non-COVID,0.9612989599087355,0,COVID-19,0.6133333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2712.png,0,COVID-19,0,COVID-19,0.9353258611643525,0,COVID-19,0.7766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2108).png,2,Normal,2,Normal,0.8807569484213389,2,Normal,0.46,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4115.png,0,COVID-19,0,COVID-19,0.9952870082522246,0,COVID-19,0.8666666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3254.png,0,COVID-19,0,COVID-19,0.9697121131210485,0,COVID-19,0.6933333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11907).png,2,Normal,2,Normal,0.8854317606449214,2,Normal,0.6066666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10503).png,1,Non-COVID,1,Non-COVID,0.7707665136485827,0,COVID-19,0.5033333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2016).png,2,Normal,2,Normal,0.9535747413427431,2,Normal,0.6133333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11171).png,1,Non-COVID,1,Non-COVID,0.8741124284890244,1,Non-COVID,0.5933333333333334,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4989).png,1,Non-COVID,0,COVID-19,0.679261200817693,0,COVID-19,0.5966666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11174).png,1,Non-COVID,1,Non-COVID,0.8164205700788122,1,Non-COVID,0.49333333333333335,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3354.png,0,COVID-19,0,COVID-19,0.9730599256235923,0,COVID-19,0.5533333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1544).png,2,Normal,2,Normal,0.7879038380864928,1,Non-COVID,0.39666666666666667,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4548.png,0,COVID-19,0,COVID-19,0.9124188248889895,0,COVID-19,0.61,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1983).png,2,Normal,0,COVID-19,0.6901200521351827,0,COVID-19,0.5,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3209.png,0,COVID-19,0,COVID-19,0.9622647243506282,0,COVID-19,0.8066666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (12).png,2,Normal,1,Non-COVID,0.6844832588344545,1,Non-COVID,0.52,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1163.png,0,COVID-19,0,COVID-19,0.9895344776321592,0,COVID-19,0.86,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_954.png,0,COVID-19,0,COVID-19,0.8018468163676551,0,COVID-19,0.7033333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1707).png,2,Normal,2,Normal,0.8227752216578312,0,COVID-19,0.4033333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11153).png,1,Non-COVID,1,Non-COVID,0.9600534636434072,1,Non-COVID,0.7266666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10396).png,1,Non-COVID,1,Non-COVID,0.9382431006407442,1,Non-COVID,0.58,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11862).png,2,Normal,2,Normal,0.9375514938868393,2,Normal,0.6933333333333334,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1921).png,2,Normal,2,Normal,0.6892666407029409,0,COVID-19,0.43666666666666665,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1636.png,0,COVID-19,0,COVID-19,0.81130309136064,2,Normal,0.44,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (349).png,1,Non-COVID,1,Non-COVID,0.8493980271816746,1,Non-COVID,0.37666666666666665,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2813.png,0,COVID-19,0,COVID-19,0.9010147219251916,0,COVID-19,0.54,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2058.png,0,COVID-19,0,COVID-19,0.6184631273201356,0,COVID-19,0.48333333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4105.png,0,COVID-19,0,COVID-19,0.9991075454591624,0,COVID-19,0.91,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3844.png,0,COVID-19,0,COVID-19,0.9966893585247095,0,COVID-19,0.9133333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10322).png,1,Non-COVID,1,Non-COVID,0.691153032461313,0,COVID-19,0.57,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4303.png,0,COVID-19,0,COVID-19,0.9710518860970228,0,COVID-19,0.78,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (85).png,2,Normal,2,Normal,0.8286298985772634,2,Normal,0.53,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3443).png,1,Non-COVID,1,Non-COVID,0.7308298182755542,0,COVID-19,0.3933333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10283).png,2,Normal,1,Non-COVID,0.5802475068242853,0,COVID-19,0.3933333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (124).png,1,Non-COVID,0,COVID-19,0.8328189631118404,2,Normal,0.43666666666666665,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (167).png,1,Non-COVID,1,Non-COVID,0.8568413494038306,1,Non-COVID,0.45,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (183).png,2,Normal,0,COVID-19,0.4692105178114256,0,COVID-19,0.4766666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4512.png,0,COVID-19,0,COVID-19,0.6759584657731295,0,COVID-19,0.58,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2088).png,2,Normal,2,Normal,0.9030398720299404,2,Normal,0.7966666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1100.png,0,COVID-19,2,Normal,0.684490955643723,2,Normal,0.5633333333333334,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1694).png,2,Normal,0,COVID-19,0.9046378132538004,0,COVID-19,0.64,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4372.png,0,COVID-19,0,COVID-19,0.9498032910524842,0,COVID-19,0.8033333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_797.png,0,COVID-19,0,COVID-19,0.717800449213674,0,COVID-19,0.5566666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1614.png,0,COVID-19,0,COVID-19,0.6017313924614118,0,COVID-19,0.6133333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2451.png,0,COVID-19,0,COVID-19,0.905450141594817,0,COVID-19,0.7466666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11945).png,2,Normal,2,Normal,0.9887511634785154,2,Normal,0.79,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (399).png,1,Non-COVID,1,Non-COVID,0.8941399405225113,0,COVID-19,0.5466666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_129.png,0,COVID-19,0,COVID-19,0.8820149827991136,0,COVID-19,0.53,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_643.png,0,COVID-19,0,COVID-19,0.9978041379481342,0,COVID-19,0.8566666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_806.png,0,COVID-19,0,COVID-19,0.999078344751327,0,COVID-19,0.9333333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3374.png,0,COVID-19,0,COVID-19,0.7964303106509028,0,COVID-19,0.61,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3119.png,0,COVID-19,0,COVID-19,0.7292375417997572,0,COVID-19,0.5333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11792).png,2,Normal,2,Normal,0.9903002638692957,2,Normal,0.76,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11930).png,1,Non-COVID,1,Non-COVID,0.9983846146073533,1,Non-COVID,0.7233333333333334,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (742).png,2,Normal,2,Normal,0.9391520487270358,0,COVID-19,0.43333333333333335,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (240).png,1,Non-COVID,1,Non-COVID,0.378621351699834,0,COVID-19,0.49,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_630.png,0,COVID-19,0,COVID-19,0.5071144201859786,0,COVID-19,0.5033333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3654.png,0,COVID-19,0,COVID-19,0.8078793907274314,0,COVID-19,0.5566666666666666,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (330).png,1,Non-COVID,0,COVID-19,0.4840816504830247,0,COVID-19,0.5333333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2098).png,2,Normal,0,COVID-19,0.41488463383345126,2,Normal,0.49666666666666665,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (9767).png,2,Normal,2,Normal,0.9721242716296958,2,Normal,0.7433333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_401.png,0,COVID-19,0,COVID-19,0.823711262916898,0,COVID-19,0.5866666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3451.png,0,COVID-19,0,COVID-19,0.9747511143416306,0,COVID-19,0.8066666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3941.png,0,COVID-19,0,COVID-19,0.9947694752465766,0,COVID-19,0.9366666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11901).png,2,Normal,1,Non-COVID,0.6114411484155559,1,Non-COVID,0.6533333333333333,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2673.png,0,COVID-19,1,Non-COVID,0.570713167901218,0,COVID-19,0.42333333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10246).png,2,Normal,2,Normal,0.8308083541898447,2,Normal,0.5266666666666666,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1182.png,0,COVID-19,0,COVID-19,0.8405026901410253,0,COVID-19,0.7733333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1762).png,2,Normal,2,Normal,0.759818440105013,0,COVID-19,0.45666666666666667,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1747.png,0,COVID-19,0,COVID-19,0.8818194209771605,0,COVID-19,0.6633333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3615.png,0,COVID-19,0,COVID-19,0.684680263315618,0,COVID-19,0.5433333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10382).png,1,Non-COVID,1,Non-COVID,0.9221524511476712,1,Non-COVID,0.5866666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (207).png,2,Normal,0,COVID-19,0.750195064430754,0,COVID-19,0.5466666666666666,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10360).png,1,Non-COVID,0,COVID-19,0.47628004931835183,0,COVID-19,0.55,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10274).png,2,Normal,2,Normal,0.9518668363128643,2,Normal,0.65,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2073.png,0,COVID-19,0,COVID-19,0.8900938118821914,0,COVID-19,0.5433333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3410).png,1,Non-COVID,1,Non-COVID,0.5935926938660642,1,Non-COVID,0.4266666666666667,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (378).png,1,Non-COVID,2,Normal,0.7232028024839071,2,Normal,0.47333333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1867.png,0,COVID-19,0,COVID-19,0.946342243472047,0,COVID-19,0.6233333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (95).png,2,Normal,2,Normal,0.9066771175137199,2,Normal,0.69,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10485).png,1,Non-COVID,1,Non-COVID,0.9696319267720885,1,Non-COVID,0.75,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (196).png,2,Normal,2,Normal,0.627147736857098,0,COVID-19,0.43,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (5023).png,1,Non-COVID,0,COVID-19,0.6142287030997398,0,COVID-19,0.5866666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1699).png,2,Normal,2,Normal,0.9206382214590952,2,Normal,0.7433333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1584.png,0,COVID-19,0,COVID-19,0.9670209304619088,0,COVID-19,0.5433333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1918).png,2,Normal,2,Normal,0.8642213682229216,2,Normal,0.6033333333333334,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (114).png,2,Normal,2,Normal,0.8397130009467182,2,Normal,0.51,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (449).png,1,Non-COVID,1,Non-COVID,0.6303944684684087,0,COVID-19,0.37,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_753.png,0,COVID-19,0,COVID-19,0.9990243241760879,0,COVID-19,0.93,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10335).png,1,Non-COVID,1,Non-COVID,0.6330861878423486,0,COVID-19,0.6866666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3939.png,0,COVID-19,0,COVID-19,0.6316145223115343,0,COVID-19,0.4066666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2183.png,0,COVID-19,0,COVID-19,0.9631554846154907,0,COVID-19,0.5066666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10425).png,1,Non-COVID,0,COVID-19,0.5085474930885175,0,COVID-19,0.5033333333333333,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/Non_COVID (57).png,1,Non-COVID,1,Non-COVID,0.8517207369125033,0,COVID-19,0.5933333333333334,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_683.png,0,COVID-19,0,COVID-19,0.9689128384668514,0,COVID-19,0.7766666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10383).png,1,Non-COVID,1,Non-COVID,0.8003142473902951,1,Non-COVID,0.47,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (7).png,2,Normal,1,Non-COVID,0.5818909126344072,1,Non-COVID,0.6266666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (128).png,2,Normal,2,Normal,0.6771370659847027,0,COVID-19,0.48333333333333334,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (141).png,2,Normal,2,Normal,0.9648844070963662,2,Normal,0.59,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11908).png,2,Normal,2,Normal,0.9858066030244342,2,Normal,0.8333333333333334,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1760).png,2,Normal,2,Normal,0.6292630784957115,2,Normal,0.4166666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2709.png,0,COVID-19,0,COVID-19,0.8728655539779262,0,COVID-19,0.38666666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3818.png,0,COVID-19,0,COVID-19,0.5475911304406288,0,COVID-19,0.4633333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (640).png,1,Non-COVID,2,Normal,0.5766520178854504,0,COVID-19,0.38333333333333336,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3280.png,0,COVID-19,0,COVID-19,0.5022237589524517,0,COVID-19,0.5733333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2802.png,0,COVID-19,0,COVID-19,0.994702839844753,0,COVID-19,0.9733333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11853).png,2,Normal,2,Normal,0.7727657495637058,2,Normal,0.5333333333333333,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1790).png,2,Normal,2,Normal,0.9885450324624918,2,Normal,0.69,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10504).png,1,Non-COVID,1,Non-COVID,0.9640632054158895,1,Non-COVID,0.49,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10586).png,1,Non-COVID,1,Non-COVID,0.8454807075202768,1,Non-COVID,0.5,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4174.png,0,COVID-19,0,COVID-19,0.9647963418897515,0,COVID-19,0.5233333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3316.png,0,COVID-19,1,Non-COVID,0.5502691563818246,0,COVID-19,0.55,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (30).png,2,Normal,2,Normal,0.8754474856815287,2,Normal,0.6566666666666666,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3470.png,0,COVID-19,0,COVID-19,0.7712695811684956,0,COVID-19,0.6366666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_528.png,0,COVID-19,0,COVID-19,0.7358012937381708,0,COVID-19,0.5966666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2768.png,0,COVID-19,0,COVID-19,0.9789568842398275,0,COVID-19,0.7166666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_399.png,0,COVID-19,0,COVID-19,0.9850029342533004,0,COVID-19,0.73,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1464).png,2,Normal,0,COVID-19,0.4525200913752383,0,COVID-19,0.5466666666666666,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (92).png,2,Normal,2,Normal,0.7329663142491205,0,COVID-19,0.38333333333333336,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3268).png,1,Non-COVID,1,Non-COVID,0.5187790722819956,2,Normal,0.43666666666666665,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3870.png,0,COVID-19,0,COVID-19,0.751794643017499,0,COVID-19,0.6066666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3396.png,0,COVID-19,0,COVID-19,0.6792086325332313,0,COVID-19,0.44333333333333336,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (745).png,2,Normal,1,Non-COVID,0.5415156082575322,0,COVID-19,0.38333333333333336,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10385).png,1,Non-COVID,1,Non-COVID,0.8408997133671708,1,Non-COVID,0.6833333333333333,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3409).png,1,Non-COVID,1,Non-COVID,0.9248665566412246,0,COVID-19,0.46,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (185).png,2,Normal,2,Normal,0.8399590263621439,2,Normal,0.5166666666666667,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (107).png,1,Non-COVID,0,COVID-19,0.51957896649502,0,COVID-19,0.56,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3321).png,1,Non-COVID,1,Non-COVID,0.6565164178651308,0,COVID-19,0.5233333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (11942).png,1,Non-COVID,0,COVID-19,0.5778565172123629,0,COVID-19,0.4533333333333333,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1786).png,2,Normal,0,COVID-19,0.5346457191164491,0,COVID-19,0.5466666666666666,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_123.png,0,COVID-19,1,Non-COVID,0.570593422214816,0,COVID-19,0.4166666666666667,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3921.png,0,COVID-19,0,COVID-19,0.9709789075543737,0,COVID-19,0.8266666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (315).png,1,Non-COVID,0,COVID-19,0.4985078604848777,0,COVID-19,0.5466666666666666,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1601).png,2,Normal,2,Normal,0.9578593117053403,2,Normal,0.55,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (121).png,2,Normal,2,Normal,0.9594047659391993,2,Normal,0.7,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (615).png,1,Non-COVID,0,COVID-19,0.688408035597752,0,COVID-19,0.7966666666666666,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1422).png,2,Normal,2,Normal,0.9847004729400142,2,Normal,0.5366666666666666,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (10247).png,2,Normal,2,Normal,0.6412212716753158,0,COVID-19,0.37666666666666665,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (561).png,1,Non-COVID,0,COVID-19,0.7102261222232494,0,COVID-19,0.49,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4379.png,0,COVID-19,0,COVID-19,0.8046306375200759,0,COVID-19,0.7133333333333334,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4139.png,0,COVID-19,0,COVID-19,0.6995684902067166,0,COVID-19,0.47333333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4248.png,0,COVID-19,0,COVID-19,0.5643276815217916,0,COVID-19,0.6133333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1127.png,0,COVID-19,0,COVID-19,0.37563941210701385,0,COVID-19,0.4633333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_22.png,0,COVID-19,0,COVID-19,0.5380190234150416,0,COVID-19,0.5033333333333333,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2589.png,0,COVID-19,0,COVID-19,0.9168156025904646,0,COVID-19,0.74,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2067.png,0,COVID-19,0,COVID-19,0.553429470859799,0,COVID-19,0.4866666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10475).png,1,Non-COVID,1,Non-COVID,0.9302899860822685,1,Non-COVID,0.4166666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2015).png,2,Normal,2,Normal,0.9359980316251124,2,Normal,0.7633333333333333,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_845.png,0,COVID-19,0,COVID-19,0.9361742493744847,0,COVID-19,0.7133333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (2004).png,2,Normal,2,Normal,0.8239205198744978,2,Normal,0.51,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3300.png,0,COVID-19,0,COVID-19,0.9854275159670434,0,COVID-19,0.8266666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (545).png,1,Non-COVID,0,COVID-19,0.44987137978320774,0,COVID-19,0.5433333333333333,1,Non-COVID,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2279.png,0,COVID-19,0,COVID-19,0.7781084194469043,0,COVID-19,0.5566666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (9736).png,2,Normal,2,Normal,0.7585392708686802,2,Normal,0.5966666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1072.png,0,COVID-19,0,COVID-19,0.9690906997169788,0,COVID-19,0.62,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (4987).png,1,Non-COVID,0,COVID-19,0.9296719021582763,0,COVID-19,0.7466666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1611.png,0,COVID-19,1,Non-COVID,0.8460193272966017,0,COVID-19,0.5433333333333333,1,Non-COVID,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (478).png,1,Non-COVID,0,COVID-19,0.42519090023426725,0,COVID-19,0.5,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (9725).png,2,Normal,2,Normal,0.7707361957529614,2,Normal,0.61,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (5028).png,1,Non-COVID,0,COVID-19,0.7346124177457609,0,COVID-19,0.5933333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2393.png,0,COVID-19,0,COVID-19,0.9458277767063851,0,COVID-19,0.6933333333333334,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3781.png,0,COVID-19,0,COVID-19,0.9172130602831629,0,COVID-19,0.62,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1873.png,0,COVID-19,0,COVID-19,0.9992586076870889,0,COVID-19,0.9333333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Normal/images/Normal (679).png,2,Normal,1,Non-COVID,0.6128494283491995,0,COVID-19,0.4066666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_27.png,0,COVID-19,0,COVID-19,0.8293956859491345,0,COVID-19,0.64,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10348).png,1,Non-COVID,1,Non-COVID,0.7332501215880445,1,Non-COVID,0.47333333333333333,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_4499.png,0,COVID-19,0,COVID-19,0.6290824622215064,0,COVID-19,0.48,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11137).png,1,Non-COVID,1,Non-COVID,0.9748107699252788,1,Non-COVID,0.6733333333333333,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1887).png,2,Normal,2,Normal,0.9262102812503507,2,Normal,0.8066666666666666,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (144).png,1,Non-COVID,0,COVID-19,0.6809736849617317,0,COVID-19,0.5833333333333334,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_2694.png,0,COVID-19,0,COVID-19,0.6191766753081986,0,COVID-19,0.5233333333333333,1,Non-COVID,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (9741).png,2,Normal,2,Normal,0.9458056020700375,2,Normal,0.68,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (402).png,1,Non-COVID,1,Non-COVID,0.6913408579343843,1,Non-COVID,0.41,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_790.png,0,COVID-19,0,COVID-19,0.9765449920288165,0,COVID-19,0.78,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1884).png,2,Normal,0,COVID-19,0.463670670557361,0,COVID-19,0.5133333333333333,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_3158.png,0,COVID-19,2,Normal,0.645202578087237,2,Normal,0.8266666666666667,2,Normal,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1829.png,0,COVID-19,0,COVID-19,0.8397593731799559,0,COVID-19,0.5166666666666667,0,COVID-19,0.6
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3736.png,0,COVID-19,0,COVID-19,0.9985679450929151,0,COVID-19,0.89,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_1254.png,0,COVID-19,0,COVID-19,0.998615003745933,0,COVID-19,0.9133333333333333,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3902.png,0,COVID-19,0,COVID-19,0.9046912923730808,0,COVID-19,0.61,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10315).png,1,Non-COVID,1,Non-COVID,0.9836478147022965,1,Non-COVID,0.6166666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (1529).png,2,Normal,2,Normal,0.9744903230517535,2,Normal,0.69,2,Normal,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (205).png,2,Normal,0,COVID-19,0.35659672550327,1,Non-COVID,0.43666666666666665,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/Non-COVID/images/non_COVID (11136).png,1,Non-COVID,1,Non-COVID,0.9865043631674218,1,Non-COVID,0.5966666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3952.png,0,COVID-19,0,COVID-19,0.8328736668318761,0,COVID-19,0.7833333333333333,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/COVID-19/images/covid_1816.png,0,COVID-19,0,COVID-19,0.978903877178355,0,COVID-19,0.7066666666666667,0,COVID-19,0.8
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_691.png,0,COVID-19,0,COVID-19,0.5403828029505173,0,COVID-19,0.44666666666666666,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Non-COVID/images/non_COVID (10492).png,1,Non-COVID,1,Non-COVID,0.9666372696387175,1,Non-COVID,0.4266666666666667,1,Non-COVID,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Non-COVID/images/non_COVID (3331).png,1,Non-COVID,0,COVID-19,0.7391464378466476,0,COVID-19,0.54,0,COVID-19,0.4
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_329.png,0,COVID-19,0,COVID-19,0.9953541468382023,0,COVID-19,0.84,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/COVID-19/images/covid_3712.png,0,COVID-19,0,COVID-19,0.6591534250634861,0,COVID-19,0.6466666666666666,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Train/Normal/images/Normal (11939).png,2,Normal,2,Normal,0.9618441644135641,2,Normal,0.8166666666666667,2,Normal,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Val/COVID-19/images/covid_2158.png,0,COVID-19,0,COVID-19,0.9290456341930182,0,COVID-19,0.7466666666666667,0,COVID-19,1.0
+/kaggle/input/covidqu/Infection Segmentation Data/Infection Segmentation Data/Test/Normal/images/Normal (155).png,2,Normal,2,Normal,0.978633464809636,2,Normal,0.72,2,Normal,1.0

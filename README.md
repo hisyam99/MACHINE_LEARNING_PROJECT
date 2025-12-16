@@ -90,7 +90,8 @@ Proyek ini melakukan klasifikasi citra Chest X-Ray menjadi tiga kelas:
 ### 🏆 Pencapaian
 
 - ✅ **Transfer Learning unggul:** DenseNet121 + LoRA (82.04%) dan HF ViT (91.65%) mengungguli model from scratch
-- ✅ **Data Augmentation penting:** Meningkatkan Custom CNN dari 71.74% menjadi 81.35% akurasi
+- ✅ **Data Augmentation penting:** Meningkatkan Custom CNN dari 70.37% (pure) / 71.74% (LoRA) menjadi 81.35% akurasi
+- ✅ **LoRA meningkatkan efisiensi:** Custom CNN dengan LoRA (71.74%) lebih baik dari Pure CNN (70.37%) dengan parameter lebih sedikit
 - ✅ **SVM masih relevan:** 86.27% akurasi sebagai baseline kuat tanpa GPU training
 - ✅ **Model lightweight:** Custom CNN + LoRA hanya ~1.8 MB dengan performa 81.35%
 
@@ -253,14 +254,22 @@ def heuristic_lung_crop(img01, padding=20):
 
 #### Variasi Eksperimen
 
-**1. Custom CNN (No Augmentation)**
+**1. Pure Custom CNN (No LoRA, No Augmentation)**
+- Akurasi: 70.37%
+- Macro F1: 0.6347
+- Weighted F1: 0.6736
+- **Catatan:** Baseline murni tanpa LoRA dan augmentasi
+
+**2. Custom CNN + LoRA (No Augmentation)**
 - Akurasi: 71.74%
 - Macro F1: 0.6586
+- **Peningkatan dari Pure:** +1.37% akurasi (efek LoRA)
 
-**2. Custom CNN (With Augmentation)**
+**3. Custom CNN + LoRA (With Augmentation)**
 - Akurasi: 81.35%
 - Macro F1: 0.7825
-- **Peningkatan:** +9.61% akurasi
+- **Peningkatan dari No Aug:** +9.61% akurasi
+- **Peningkatan dari Pure:** +10.98% akurasi
 
 ### 4. TASK 3: Transfer Learning + Vision Transformer
 
@@ -379,6 +388,7 @@ def heuristic_lung_crop(img01, padding=20):
 | **DenseNet121 + LoRA** | 82.04% | 0.8003 | 0.8187 | 0.8743 | 0.7241 | 0.8025 |
 | **Custom CNN (+Aug, LoRA Head)** | 81.35% | 0.7825 | 0.8093 | 0.8901 | 0.6601 | 0.7972 |
 | **Custom CNN (No Aug, LoRA Head)** | 71.74% | 0.6586 | 0.7024 | 0.8342 | 0.4788 | 0.6627 |
+| **Pure Custom CNN (No LoRA, No Aug)** | 70.37% | 0.6347 | 0.6736 | 0.7907 | 0.4615 | 0.6517 |
 | **ViT (Keras)** | 68.54% | 0.6645 | 0.6876 | 0.7569 | 0.5921 | 0.6446 |
 
 ### Analisis Utama
@@ -398,13 +408,25 @@ def heuristic_lung_crop(img01, padding=20):
 - Ukuran model relatif besar (~95 MB) namun performa optimal
 - **Masih relevan** sebagai baseline yang kuat tanpa memerlukan GPU training
 
-#### 3. Dampak Data Augmentation pada Custom CNN
+#### 3. Dampak LoRA dan Data Augmentation pada Custom CNN
 
-- **Tanpa Augmentation:** Akurasi 71.74%, Macro F1 0.6586
-- **Dengan Augmentation:** Akurasi 81.35%, Macro F1 0.7825
+**Efek LoRA (tanpa augmentation):**
+- **Pure CNN (No LoRA):** Akurasi 70.37%, Macro F1 0.6347
+- **Custom CNN + LoRA:** Akurasi 71.74%, Macro F1 0.6586
+- **Peningkatan dengan LoRA:** +1.37% akurasi, +0.0239 Macro F1
+- **Kesimpulan:** LoRA memberikan peningkatan moderat dengan efisiensi parameter tinggi
+
+**Efek Data Augmentation:**
+- **Tanpa Augmentation (LoRA):** Akurasi 71.74%, Macro F1 0.6586
+- **Dengan Augmentation (LoRA):** Akurasi 81.35%, Macro F1 0.7825
 - **Peningkatan signifikan:** +9.61% akurasi, +0.1239 Macro F1
 - **F1 Non-COVID meningkat drastis:** 0.4788 → 0.6601 (peningkatan 37.8%)
-- **Kesimpulan:** Data augmentation sangat penting untuk model kecil dari scratch
+
+**Efek Gabungan (dari Pure baseline):**
+- **Pure CNN:** 70.37% akurasi
+- **CNN + LoRA + Aug:** 81.35% akurasi
+- **Total peningkatan:** +10.98% akurasi
+- **Kesimpulan:** Data augmentation sangat penting, LoRA menambah efisiensi dan stabilitas
 
 #### 4. Transfer Learning vs From Scratch
 
@@ -484,11 +506,22 @@ pip install torch torchvision
 
 ### Grafik Training
 
+#### Pure Custom CNN (No LoRA, No Augmentation)
+
+![Training Curves - Pure Custom CNN](output_images/acc_loss_custom_cnn_no_lora_no_augmentation.png)
+
+**Observasi:**
+- Baseline murni tanpa LoRA dan augmentasi
+- Training accuracy mencapai ~75%
+- Validation accuracy plateau di ~70%
+- Overfitting moderat
+
 #### Custom CNN + LoRA (No Augmentation)
 
 ![Training Curves - Custom CNN No Aug](output_images/acc_loss_custom_cnn_lora_no_augmentation.png)
 
 **Observasi:**
+- LoRA memberikan sedikit peningkatan stabilitas
 - Overfitting mulai terjadi di Epoch 8
 - Training accuracy mencapai ~85%
 - Validation accuracy plateau di ~72%
@@ -592,12 +625,22 @@ pip install torch torchvision
 
 ### Confusion Matrix
 
+#### Pure Custom CNN (No LoRA, No Augmentation)
+
+![Confusion Matrix - Pure Custom CNN](output_images/conf_matrix_custom_cnn_no_lora_no_augmentation.png)
+
+**Observasi:**
+- Baseline murni menunjukkan kesulitan pada kelas Non-COVID
+- Precision COVID-19 lebih rendah (banyak false positive)
+- Model cenderung over-predict COVID-19
+
 #### Custom CNN + LoRA (No Augmentation)
 
 ![Confusion Matrix - Custom CNN No Aug](output_images/conf_matrix_custom_cnn_lora_no_augmentation.png)
 
 **Observasi:**
-- Banyak false positives untuk COVID-19
+- LoRA memberikan sedikit perbaikan pada precision
+- Masih banyak false positives untuk COVID-19
 - Non-COVID sering salah klasifikasi
 - Normal sering diprediksi sebagai COVID-19
 
@@ -639,11 +682,21 @@ pip install torch torchvision
 
 ### Visualisasi Prediksi
 
+#### Pure Custom CNN (No LoRA, No Augmentation)
+
+![Predictions - Pure Custom CNN](output_images/custom_cnn_no_lora_no_augmentation_5_predict_true_false.png)
+
+**Observasi:**
+- Model baseline menunjukkan keterbatasan dalam pembedaan kelas
+- Confidence bervariasi, kadang tinggi pada prediksi salah
+- Kesulitan membedakan Non-COVID dari COVID-19 dan Normal
+
 #### Custom CNN + LoRA (No Augmentation)
 
 ![Predictions - Custom CNN No Aug](output_images/custom_cnn_lora_no_augmentation_5_predict_true_false.png)
 
 **Observasi:**
+- LoRA memberikan confidence yang lebih stabil
 - Prediksi benar: Confidence tinggi untuk COVID-19
 - Prediksi salah: Normal sering diprediksi sebagai COVID-19
 - False positives dengan confidence tinggi

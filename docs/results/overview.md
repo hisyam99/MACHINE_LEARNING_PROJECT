@@ -10,10 +10,11 @@
 | **SVM (RBF)** | 86.27% | 0.843 | - | - | - | - |
 | **DenseNet121 + LoRA** | 82.04% | 0.8003 | 0.8187 | 0.8743 | 0.7241 | 0.8025 |
 | **Custom CNN (+Aug)** | 81.35% | 0.7825 | 0.8093 | 0.8901 | 0.6601 | 0.7972 |
-| **Custom CNN (No Aug)** | 71.74% | 0.6586 | 0.7024 | 0.8342 | 0.4788 | 0.6627 |
-| **ViT (Keras)** | 68.54% | 0.6645 | 0.6876 | 0.7569 | 0.5921 | 0.6446 |
 | **kNN (k=5)** | 77.57% | 0.739 | - | - | - | - |
 | **Random Forest** | 76.09% | 0.719 | - | - | - | - |
+| **Custom CNN (No Aug)** | 71.74% | 0.6586 | 0.7024 | 0.8342 | 0.4788 | 0.6627 |
+| **Pure Custom CNN (No LoRA, No Aug)** | 70.37% | 0.6347 | 0.6736 | 0.7907 | 0.4615 | 0.6517 |
+| **ViT (Keras)** | 68.54% | 0.6645 | 0.6876 | 0.7569 | 0.5921 | 0.6446 |
 
 ## 🏆 Model Terbaik
 
@@ -48,11 +49,12 @@
 
 | Model | Akurasi | Macro F1 | Catatan |
 |:------|:-------:|:--------:|:--------|
-| **Custom CNN (+Aug)** | 81.35% | 0.7825 | Dengan augmentation |
-| **Custom CNN (No Aug)** | 71.74% | 0.6586 | Tanpa augmentation |
+| **Custom CNN (+Aug)** | 81.35% | 0.7825 | Dengan augmentation + LoRA |
+| **Custom CNN (No Aug)** | 71.74% | 0.6586 | Tanpa augmentation + LoRA |
+| **Pure Custom CNN (No LoRA, No Aug)** | 70.37% | 0.6347 | Baseline murni tanpa LoRA |
 | **ViT (Keras)** | 68.54% | 0.6645 | From scratch |
 
-**Kesimpulan:** Data augmentation sangat penting untuk model from scratch.
+**Kesimpulan:** Data augmentation sangat penting (+9.61% boost), LoRA memberikan efisiensi parameter dan stabilitas (+1.37% boost).
 
 ### Deep Learning - Transfer Learning
 
@@ -73,6 +75,7 @@
 | **Custom CNN (+Aug)** | 0.8901 | 0.6601 | 0.7972 |
 | **DenseNet121 + LoRA** | 0.8743 | 0.7241 | 0.8025 |
 | **Custom CNN (No Aug)** | 0.8342 | 0.4788 | 0.6627 |
+| **Pure Custom CNN (No LoRA, No Aug)** | 0.7907 | 0.4615 | 0.6517 |
 | **ViT (Keras)** | 0.7569 | 0.5921 | 0.6446 |
 
 ### Temuan
@@ -108,10 +111,11 @@
 ## 💡 Key Insights
 
 1. **Transfer Learning unggul:** HF ViT (91.65%) dan DenseNet121 (82.04%) mengungguli model from scratch
-2. **Data Augmentation penting:** Meningkatkan Custom CNN dari 71.74% menjadi 81.35%
-3. **SVM masih relevan:** 86.27% akurasi sebagai baseline kuat tanpa GPU
-4. **Non-COVID adalah kelas paling sulit:** F1 lebih rendah dibandingkan kelas lain
-5. **Trade-off Akurasi vs Efisiensi:** HF ViT akurasi tertinggi, Custom CNN paling ringan
+2. **Data Augmentation sangat penting:** Meningkatkan Custom CNN dari 70.37% (pure) / 71.74% (LoRA) menjadi 81.35%
+3. **LoRA memberikan efisiensi:** Pure CNN (70.37%) vs CNN+LoRA (71.74%) - peningkatan +1.37% dengan parameter lebih efisien
+4. **SVM masih relevan:** 86.27% akurasi sebagai baseline kuat tanpa GPU
+5. **Non-COVID adalah kelas paling sulit:** F1 lebih rendah dibandingkan kelas lain (Pure CNN: 0.4615, CNN+LoRA: 0.4788)
+6. **Trade-off Akurasi vs Efisiensi:** HF ViT akurasi tertinggi, Custom CNN paling ringan
 
 [📊 Lihat analisis detail →](analysis.md)
 

@@ -34,7 +34,8 @@ Proyek ini melakukan komparasi mendalam antara pendekatan **Machine Learning Kla
 ### 🏆 Pencapaian
 
 - ✅ **Transfer Learning unggul:** DenseNet121 + LoRA (82.04%) dan HF ViT (91.65%) mengungguli model from scratch
-- ✅ **Data Augmentation penting:** Meningkatkan Custom CNN dari 71.74% menjadi 81.35% akurasi
+- ✅ **Data Augmentation penting:** Meningkatkan Custom CNN dari 70.37% (pure) / 71.74% (LoRA) menjadi 81.35% akurasi
+- ✅ **LoRA meningkatkan efisiensi:** Custom CNN dengan LoRA (71.74%) lebih baik dari Pure CNN (70.37%) dengan parameter lebih efisien
 - ✅ **SVM masih relevan:** 86.27% akurasi sebagai baseline kuat tanpa GPU training
 - ✅ **Model lightweight:** Custom CNN + LoRA hanya ~1.8 MB dengan performa 81.35%
 
@@ -110,6 +111,7 @@ Proyek ini menggunakan dataset **COVID-QU-Ex** dari Qatar University.
 | **DenseNet121 + LoRA** | 82.04% | 0.8003 | 0.8743 | 0.7241 | 0.8025 |
 | **Custom CNN (+Aug)** | 81.35% | 0.7825 | 0.8901 | 0.6601 | 0.7972 |
 | **Custom CNN (No Aug)** | 71.74% | 0.6586 | 0.8342 | 0.4788 | 0.6627 |
+| **Pure Custom CNN (No LoRA, No Aug)** | 70.37% | 0.6347 | 0.7907 | 0.4615 | 0.6517 |
 
 [📊 Lihat analisis lengkap →](results/overview.md)
 

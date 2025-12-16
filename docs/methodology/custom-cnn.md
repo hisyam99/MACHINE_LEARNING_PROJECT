@@ -126,11 +126,31 @@ callbacks = [
 
 ## 📊 Variasi Eksperimen
 
-### 1. Custom CNN (No Augmentation)
+### 1. Pure Custom CNN (No LoRA, No Augmentation)
 
 **Konfigurasi:**
+- **Tanpa LoRA** pada layer Dense (menggunakan Dense standar)
 - Tanpa data augmentation
-- Baseline untuk perbandingan
+- Baseline murni untuk perbandingan
+
+**Hasil:**
+- **Akurasi:** 70.37%
+- **Macro F1:** 0.6347
+- **F1 COVID-19:** 0.7907
+- **F1 Non-COVID:** 0.4615
+- **F1 Normal:** 0.6517
+
+**Catatan:**
+- Memberikan baseline murni tanpa optimasi
+- Recall COVID-19 sangat tinggi (97.71%) namun precision rendah (66.41%)
+- Menunjukkan pentingnya LoRA dan augmentasi
+
+### 2. Custom CNN + LoRA (No Augmentation)
+
+**Konfigurasi:**
+- Dengan LoRA pada layer Dense
+- Tanpa data augmentation
+- Baseline untuk mengukur dampak augmentasi
 
 **Hasil:**
 - **Akurasi:** 71.74%
@@ -139,9 +159,15 @@ callbacks = [
 - **F1 Non-COVID:** 0.4788
 - **F1 Normal:** 0.6627
 
-### 2. Custom CNN (With Augmentation)
+**Peningkatan dari Pure CNN:**
+- ✅ +1.37% akurasi
+- ✅ +0.0239 Macro F1
+- ✅ Efisiensi parameter dengan LoRA
+
+### 3. Custom CNN + LoRA (With Augmentation)
 
 **Konfigurasi:**
+- Dengan LoRA pada layer Dense
 - Dengan data augmentation
 - Random rotation, zoom, brightness, flip
 
@@ -152,10 +178,15 @@ callbacks = [
 - **F1 Non-COVID:** 0.6601
 - **F1 Normal:** 0.7972
 
-**Peningkatan:**
+**Peningkatan dari LoRA No Aug:**
 - ✅ +9.61% akurasi
 - ✅ +0.1239 Macro F1
 - ✅ F1 Non-COVID meningkat 37.8%
+
+**Peningkatan Total dari Pure Baseline:**
+- ✅ +10.98% akurasi
+- ✅ +0.1478 Macro F1
+- ✅ Kombinasi LoRA + Augmentasi sangat efektif
 
 ## 🔍 Analisis
 
@@ -172,22 +203,39 @@ callbacks = [
 - ⚠️ **Struggles dengan fine-grained features** (Non-COVID vs Normal)
 - ⚠️ **Performa lebih rendah** dibandingkan transfer learning
 
-### Dampak Data Augmentation
+### Dampak LoRA dan Data Augmentation
 
-Data augmentation memberikan peningkatan signifikan:
+**Kontribusi LoRA:**
 
-| Metrik | No Aug | With Aug | Improvement |
-|:-------|:------:|:--------:|:-----------:|
+| Metrik | Pure CNN | CNN + LoRA | Improvement |
+|:-------|:--------:|:----------:|:-----------:|
+| **Akurasi** | 70.37% | 71.74% | +1.37% |
+| **Macro F1** | 0.6347 | 0.6586 | +0.0239 |
+| **Efisiensi** | Standar | Parameter efisien | LoRA advantage |
+
+**Kontribusi Data Augmentation:**
+
+| Metrik | No Aug (LoRA) | With Aug (LoRA) | Improvement |
+|:-------|:-------------:|:---------------:|:-----------:|
 | **Akurasi** | 71.74% | 81.35% | +9.61% |
 | **Macro F1** | 0.6586 | 0.7825 | +0.1239 |
 | **F1 Non-COVID** | 0.4788 | 0.6601 | +37.8% |
 
+**Dampak Gabungan:**
+
+| Metrik | Pure CNN | CNN + LoRA + Aug | Total Improvement |
+|:-------|:--------:|:----------------:|:-----------------:|
+| **Akurasi** | 70.37% | 81.35% | +10.98% |
+| **Macro F1** | 0.6347 | 0.7825 | +0.1478 |
+
 ## 💡 Kesimpulan
 
-1. **Custom CNN cocok untuk deployment mobile/edge** karena ukurannya yang kecil
-2. **Data augmentation sangat penting** untuk model from scratch
-3. **LoRA membantu efisiensi parameter** tanpa mengorbankan performa
-4. **Transfer learning masih lebih baik** untuk akurasi maksimal
+1. **Pure CNN baseline menunjukkan keterbatasan model from scratch** tanpa optimasi
+2. **LoRA memberikan efisiensi parameter** dengan peningkatan performa moderat (+1.37%)
+3. **Data augmentation sangat penting** untuk model from scratch (+9.61% boost)
+4. **Kombinasi LoRA + Augmentasi optimal** untuk deployment dengan peningkatan total +10.98%
+5. **Custom CNN cocok untuk deployment mobile/edge** karena ukurannya yang kecil (~1.8 MB)
+6. **Transfer learning masih lebih baik** untuk akurasi maksimal (82-91%)
 
 [📖 Pelajari lebih lanjut tentang LoRA →](lora.md)
 

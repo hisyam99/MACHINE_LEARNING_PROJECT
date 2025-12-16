@@ -412,11 +412,112 @@ Formula: `weight[i] = n_samples / (n_classes * n_samples_class[i])`
 
 ## 📊 Eksperimen
 
-### Eksperimen 1: Tanpa Augmentation (Baseline)
+### Eksperimen 0: Pure Custom CNN (Tanpa LoRA, Tanpa Augmentation) - Baseline Murni
 
 **Konfigurasi:**
+- **Tidak menggunakan LoRA** pada layer Dense
 - Tidak menggunakan data augmentation
-- Baseline untuk perbandingan dan mengukur pentingnya augmentasi
+- Baseline murni untuk mengukur kontribusi LoRA dan augmentasi
+- Training epochs: maksimal 50 (dengan early stopping)
+- Batch size: 16
+
+**Hasil Test Set:**
+- **Akurasi:** 70.37%
+- **Macro F1:** 0.6347
+- **Weighted F1:** 0.6736
+- **F1 COVID-19:** 0.7907
+- **F1 Non-COVID:** 0.4615
+- **F1 Normal:** 0.6517
+
+**Classification Report Detail:**
+
+| Kelas | Precision | Recall | F1-Score | Support |
+|:------|:---------:|:------:|:--------:|:-------:|
+| **COVID-19** | 0.6641 | 0.9771 | 0.7907 | 437 |
+| **Non-COVID** | 0.7742 | 0.3288 | 0.4615 | 219 |
+| **Normal** | 0.8406 | 0.5321 | 0.6517 | 218 |
+| **Akurasi Total** | | | **70.37%** | 874 |
+| **Macro Avg** | 0.7596 | 0.6127 | 0.6347 | 874 |
+| **Weighted Avg** | 0.7357 | 0.7037 | 0.6736 | 874 |
+
+**Observasi:**
+- Model baseline murni menunjukkan keterbatasan signifikan
+- Recall COVID-19 sangat tinggi (97.71%) namun precision rendah (66.41%)
+- Banyak false positive untuk COVID-19
+- Non-COVID memiliki recall terendah (32.88%)
+- Performa keseluruhan lebih rendah dari model dengan LoRA
+
+#### Training Curves - Pure Custom CNN
+
+![Training Curves Pure CNN](../output_images/acc_loss_custom_cnn_no_lora_no_augmentation.png)
+
+**Gambar: Grafik Akurasi dan Loss selama Pelatihan (Train vs Validation) - Pure CNN**
+
+**Analisis Training Curves:**
+
+Grafik menunjukkan karakteristik model pure CNN tanpa optimasi:
+
+1. **Training Loss** turun moderat
+2. **Validation Loss** mengalami fluktuasi
+3. **Gap train-val metrics** cukup besar
+4. **Overfitting moderat** terlihat setelah beberapa epoch
+
+#### Confusion Matrix - Pure Custom CNN
+
+![Confusion Matrix Pure CNN](../output_images/conf_matrix_custom_cnn_no_lora_no_augmentation.png)
+
+**Gambar: Confusion Matrix pada Data Uji (Pure CNN)**
+
+**Analisis Confusion Matrix:**
+
+Confusion Matrix menunjukkan pola baseline:
+
+1. **Over-prediction COVID-19:**
+   - Model sangat sensitif terhadap COVID-19 (recall 97.71%)
+   - Banyak false positive dari kelas Non-COVID dan Normal
+   - 127 Non-COVID diprediksi sebagai COVID-19
+   - 89 Normal diprediksi sebagai COVID-19
+
+2. **Kesulitan pada Non-COVID:**
+   - Hanya 72 dari 219 Non-COVID yang diprediksi benar (recall 32.88%)
+   - Kelas paling sulit dibedakan
+
+3. **Performa Normal Moderat:**
+   - 116 dari 218 Normal diprediksi benar (recall 53.21%)
+   - Masih banyak yang salah diprediksi sebagai COVID-19
+
+#### Visualisasi Prediksi - Pure Custom CNN
+
+![Sample Predictions Pure CNN](../output_images/custom_cnn_no_lora_no_augmentation_5_predict_true_false.png)
+
+**Gambar: Sampel Prediksi Pure CNN (Baris Atas: Prediksi Benar, Baris Bawah: Prediksi Salah)**
+
+**Analisis Kualitatif:**
+
+- **Prediksi benar:** Confidence bervariasi, terutama tinggi untuk COVID-19
+- **Prediksi salah:** Model cenderung over-predict COVID-19 dengan confidence tinggi
+- **Pattern:** Kesulitan membedakan pneumonia patterns yang subtle
+
+#### Kesimpulan Eksperimen 0
+
+**Karakteristik Pure CNN (No LoRA, No Aug):**
+- ❌ Over-prediction COVID-19 yang parah
+- ❌ Recall Non-COVID sangat rendah (32.88%)
+- ❌ Precision COVID-19 rendah (66.41%)
+- ⚠️ Trade-off sensitivity vs specificity tidak optimal
+- ℹ️ Memberikan baseline untuk mengukur kontribusi LoRA dan augmentasi
+
+**Pelajaran:**
+- LoRA dan augmentasi sangat diperlukan untuk model from scratch
+- Baseline murni menunjukkan keterbatasan arsitektur sederhana
+- Diperlukan optimasi untuk meningkatkan performa
+
+### Eksperimen 1: Custom CNN + LoRA (Tanpa Augmentation)
+
+**Konfigurasi:**
+- Menggunakan LoRA pada layer Dense
+- Tidak menggunakan data augmentation
+- Baseline dengan LoRA untuk mengukur pentingnya augmentasi
 - Training epochs: maksimal 50 (dengan early stopping)
 - Batch size: 16
 
@@ -428,6 +529,13 @@ Formula: `weight[i] = n_samples / (n_classes * n_samples_class[i])`
 - **F1 Non-COVID:** 0.4788 (0.5789 sesuai laporan)
 - **F1 Normal:** 0.6627 (0.5646 sesuai laporan)
 
+**Peningkatan dari Pure Baseline:**
+- ✅ **+1.37% akurasi** (70.37% → 71.74%)
+- ✅ **+0.0239 Macro F1** (0.6347 → 0.6586)
+- ✅ **F1 COVID-19 meningkat** dari 0.7907 → 0.8342
+- ✅ **Precision COVID-19 membaik** dengan LoRA
+- ℹ️ **LoRA memberikan stabilitas dan efisiensi parameter**
+
 **Tabel 5.1: Laporan Klasifikasi Custom CNN + LoRA (Tanpa Augmentasi)**
 
 | Kelas | Precision | Recall | F1-Score | Support |
@@ -438,11 +546,11 @@ Formula: `weight[i] = n_samples / (n_classes * n_samples_class[i])`
 | **Akurasi Total** | | | **71.05%** | 874 |
 | **Macro Avg** | 0.7326 | 0.6292 | 0.6498 | 874 |
 
-#### Training Curves - No Augmentation
+#### Training Curves - Custom CNN + LoRA (No Augmentation)
 
 ![Training Curves No Aug](../output_images/acc_loss_custom_cnn_lora_no_augmentation.png)
 
-**Gambar 5.1: Grafik Akurasi dan Loss selama Pelatihan (Train vs Validation) - Tanpa Augmentasi**
+**Gambar: Grafik Akurasi dan Loss selama Pelatihan (Train vs Validation) - Custom CNN + LoRA Tanpa Augmentasi**
 
 **Analisis Training Curves:**
 
@@ -458,11 +566,16 @@ Grafik di atas menunjukkan fenomena **overfitting yang cukup jelas** setelah epo
 - Model mulai **menghafal** data latih namun gagal menggeneralisasi pola pada data validasi
 - Mekanisme Early Stopping berhasil mencegah degradasi lebih lanjut dengan mengembalikan bobot terbaik dari epoch 8
 
-#### Confusion Matrix - No Augmentation
+**Perbandingan dengan Pure CNN:**
+- Pure CNN (No LoRA) menunjukkan overfitting moderat
+- CNN + LoRA menunjukkan overfitting lebih parah namun akurasi final lebih tinggi
+- LoRA memberikan kapasitas lebih untuk learning, namun butuh regularisasi (augmentasi)
+
+#### Confusion Matrix - Custom CNN + LoRA (No Augmentation)
 
 ![Confusion Matrix No Aug](../output_images/conf_matrix_custom_cnn_lora_no_augmentation.png)
 
-**Gambar 5.2: Confusion Matrix pada Data Uji (Tanpa Augmentasi)**
+**Gambar: Confusion Matrix pada Data Uji (Custom CNN + LoRA Tanpa Augmentasi)**
 
 **Analisis Confusion Matrix:**
 
@@ -472,22 +585,24 @@ Confusion Matrix menunjukkan karakteristik menarik:
    - Model berhasil mengenali **95% kasus positif COVID-19** (Recall 0.95)
    - Sangat baik untuk keperluan skrining medis agar tidak ada kasus positif yang terlewat
    - False Negative COVID-19 sangat rendah (hanya ~22 kasus)
+   - **Peningkatan dari Pure CNN** yang memiliki recall 97.71% namun precision lebih rendah
 
 2. **Kebingungan pada Kelas Normal/Non-COVID:**
    - Model mengalami kesulitan membedakan kelas Normal dan Non-COVID
    - Banyak sampel dari kedua kelas ini yang **salah diprediksi sebagai COVID-19**
    - **Tingkat False Positive cukup tinggi** (~42 Non-COVID → COVID-19, ~21 Normal → COVID-19)
+   - Sedikit lebih baik dari Pure CNN namun masih perlu improvement
 
 3. **Penyebab Masalah:**
    - Arsitektur CNN yang terlalu sederhana (shallow) sehingga belum mampu menangkap **fitur fine-grained**
    - Kurangnya data augmentation membuat model tidak cukup terpapar variasi
    - Model cenderung "terlalu waspada" dan bias terhadap kelas COVID-19
 
-#### Visualisasi Prediksi Kualitatif - No Augmentation
+#### Visualisasi Prediksi Kualitatif - Custom CNN + LoRA (No Augmentation)
 
 ![Sample Predictions No Aug](../output_images/custom_cnn_lora_no_augmentation_5_predict_true_false.png)
 
-**Gambar 5.3: Sampel Prediksi (Baris Atas: Prediksi Benar, Baris Bawah: Prediksi Salah)**
+**Gambar: Sampel Prediksi Custom CNN + LoRA (Baris Atas: Prediksi Benar, Baris Bawah: Prediksi Salah)**
 
 **Analisis Kualitatif:**
 
@@ -498,25 +613,33 @@ Pada **baris bawah** (kasus salah), terlihat bahwa model cenderung:
 
 Ini konsisten dengan temuan **Recall COVID-19 yang sangat tinggi (95%)** namun **Precision yang moderat (~70%)**.
 
+**Perbandingan dengan Pure CNN:**
+- LoRA memberikan confidence yang sedikit lebih stabil
+- Precision sedikit lebih baik dengan LoRA
+- Namun masih memerlukan augmentasi untuk hasil optimal
+
 #### Kesimpulan Eksperimen 1
 
-**Kelemahan Model Tanpa Augmentasi:**
+**Kelemahan Model Tanpa Augmentasi (dengan LoRA):**
 - ❌ Overfitting parah setelah epoch 8
 - ❌ False Positive rate tinggi untuk COVID-19
 - ❌ Gagal menangkap fine-grained features untuk membedakan Non-COVID dan Normal
 - ❌ Generalisasi buruk pada data validation
 
-**Kelebihan:**
-- ✅ Sensitivitas COVID-19 sangat tinggi (95% recall)
+**Kelebihan dibanding Pure CNN:**
+- ✅ Akurasi +1.37% lebih tinggi (70.37% → 71.74%)
+- ✅ F1-Score lebih seimbang
+- ✅ Parameter lebih efisien dengan LoRA
 - ✅ Model sangat lightweight (~1.8 MB)
 - ✅ Inference cepat
 
 **Pelajaran:**
+- LoRA memberikan peningkatan moderat (+1.37%) dengan efisiensi parameter
 - Data augmentation **sangat krusial** untuk model from scratch
 - Arsitektur lightweight perlu dukungan regularisasi kuat
 - Trade-off antara sensitivitas dan precision perlu dioptimalkan
 
-### Eksperimen 2: Dengan Augmentation
+### Eksperimen 2: Custom CNN + LoRA (Dengan Augmentation)
 
 **Konfigurasi Data Augmentation:**
 
@@ -558,11 +681,18 @@ data_augmentation = tf.keras.Sequential([
 - **F1 Non-COVID:** 0.6601
 - **F1 Normal:** 0.7972
 
-**Peningkatan dari Baseline:**
+**Peningkatan dari LoRA Baseline (No Aug):**
 - ✅ **+9.61% akurasi** (71.74% → 81.35%)
 - ✅ **+0.1239 Macro F1** (0.6586 → 0.7825)
 - ✅ **F1 Non-COVID meningkat 37.8%** (0.4788 → 0.6601)
 - ✅ **F1 Normal meningkat 20.3%** (0.6627 → 0.7972)
+
+**Peningkatan Total dari Pure Baseline:**
+- ✅ **+10.98% akurasi** (70.37% → 81.35%)
+- ✅ **+0.1478 Macro F1** (0.6347 → 0.7825)
+- ✅ **F1 COVID-19 meningkat 12.6%** (0.7907 → 0.8901)
+- ✅ **F1 Non-COVID meningkat 43.0%** (0.4615 → 0.6601)
+- ✅ **F1 Normal meningkat 22.3%** (0.6517 → 0.7972)
 
 #### Training Curves - With Augmentation
 
@@ -677,25 +807,35 @@ Meskipun augmentasi membawa peningkatan besar, performa Custom CNN + LoRA (81.35
 
 ### Temuan Utama
 
-1. **Data Augmentation Sangat Penting untuk Model From Scratch**
-   - Peningkatan akurasi +9.61% (71.74% → 81.35%)
+1. **Pure CNN Baseline Memberikan Insight Penting**
+   - Pure Custom CNN (No LoRA, No Aug): 70.37% akurasi
+   - Menunjukkan baseline murni untuk mengukur kontribusi optimasi
+   - Recall COVID-19 sangat tinggi (97.71%) namun precision rendah (66.41%)
+   - **Kesimpulan:** Model sederhana dari nol memerlukan optimasi signifikan
+
+2. **LoRA Memberikan Efisiensi Parameter dan Stabilitas**
+   - Peningkatan dari Pure CNN: +1.37% akurasi (70.37% → 71.74%)
+   - Model size tetap ~1.8 MB (sangat lightweight)
+   - Total parameter: ~405K (98% lebih kecil dari pre-trained models)
+   - Precision dan F1-Score lebih seimbang
+   - **Kesimpulan:** LoRA adalah teknik efektif untuk efisiensi parameter dengan peningkatan performa moderat
+
+3. **Data Augmentation Sangat Penting untuk Model From Scratch**
+   - Peningkatan dari LoRA baseline: +9.61% akurasi (71.74% → 81.35%)
+   - Peningkatan total dari Pure baseline: +10.98% akurasi (70.37% → 81.35%)
    - Overfitting berkurang drastis
    - Model lebih robust terhadap variasi input
    - **Kesimpulan:** Augmentasi adalah teknik wajib untuk CNN yang dilatih dari nol pada dataset medis terbatas
 
-2. **LoRA Membantu Efisiensi Parameter**
-   - Model size hanya ~1.8 MB (sangat lightweight)
-   - Total parameter: ~405K (98% lebih kecil dari pre-trained models)
-   - Tidak ada pengorbanan signifikan pada performa
-   - **Kesimpulan:** LoRA adalah teknik efektif untuk membuat model deployment-ready
-
-3. **Model Cocok untuk Deployment Mobile/Edge**
+4. **Model Cocok untuk Deployment Mobile/Edge**
    - Ukuran kecil (~1.8 MB) cocok untuk perangkat dengan storage terbatas
    - Inference time reasonable
    - Akurasi 81.35% masih cukup baik untuk triase awal
    - **Use Case:** Screening app di ponsel, embedded systems
 
-4. **Performa Masih Di Bawah Metode Lain**
+5. **Performa Masih Di Bawah Metode Lain**
+   - Pure Custom CNN (No LoRA, No Aug): 70.37%
+   - Custom CNN + LoRA (No Aug): 71.74%
    - Custom CNN + LoRA (With Aug): 81.35%
    - SVM klasik: 86.27% (lebih baik +4.92%)
    - Transfer learning models: 82-91% (lebih baik +1-10%)
@@ -703,14 +843,14 @@ Meskipun augmentasi membawa peningkatan besar, performa Custom CNN + LoRA (81.35
 
 ### Perbandingan Eksperimen
 
-| Metrik | No Aug | With Aug | Delta |
-|:-------|:-------|:---------|:------|
-| **Akurasi** | 71.74% | 81.35% | **+9.61%** |
-| **Macro F1** | 0.6586 | 0.7825 | **+0.1239** |
-| **F1 COVID-19** | 0.8342 | 0.8901 | +0.0559 |
-| **F1 Non-COVID** | 0.4788 | 0.6601 | **+0.1813** |
-| **F1 Normal** | 0.6627 | 0.7972 | **+0.1345** |
-| **Overfitting** | Parah (epoch 8) | Minimal | **Improved** |
+| Metrik | Pure CNN (No LoRA, No Aug) | CNN + LoRA (No Aug) | CNN + LoRA (With Aug) | Delta Pure→LoRA | Delta LoRA→Aug | Delta Pure→Final |
+|:-------|:-------------------------:|:-------------------:|:--------------------:|:---------------:|:--------------:|:----------------:|
+| **Akurasi** | 70.37% | 71.74% | 81.35% | **+1.37%** | **+9.61%** | **+10.98%** |
+| **Macro F1** | 0.6347 | 0.6586 | 0.7825 | **+0.0239** | **+0.1239** | **+0.1478** |
+| **F1 COVID-19** | 0.7907 | 0.8342 | 0.8901 | +0.0435 | +0.0559 | **+0.0994** |
+| **F1 Non-COVID** | 0.4615 | 0.4788 | 0.6601 | +0.0173 | **+0.1813** | **+0.1986** |
+| **F1 Normal** | 0.6517 | 0.6627 | 0.7972 | +0.0110 | **+0.1345** | **+0.1455** |
+| **Overfitting** | Moderat | Parah (epoch 8) | Minimal | Worse | **Improved** | **Much Improved** |
 
 ### Analisis Mendalam
 
@@ -737,10 +877,37 @@ Custom CNN dengan 4 blok konvolusi adalah trade-off antara:
 - **Terlalu deep:** Risiko overfitting tinggi pada dataset kecil (5,826 images)
 - **Sweet spot:** 4 blok + heavy regularization (dropout, batch norm, augmentation)
 
+### Kontribusi LoRA dan Augmentasi
+
+**Kontribusi LoRA (tanpa augmentasi):**
+- Pure CNN: 70.37% → CNN + LoRA: 71.74%
+- **Peningkatan: +1.37% akurasi**
+- LoRA memberikan:
+  - ✅ Efisiensi parameter (parameter trainable lebih sedikit)
+  - ✅ Stabilitas training (regulasi implisit)
+  - ✅ Precision yang lebih baik
+  - ✅ F1-Score lebih seimbang
+
+**Kontribusi Data Augmentation:**
+- CNN + LoRA (No Aug): 71.74% → CNN + LoRA (With Aug): 81.35%
+- **Peningkatan: +9.61% akurasi**
+- Augmentasi memberikan:
+  - ✅ Robustness terhadap variasi
+  - ✅ Mengurangi overfitting drastis
+  - ✅ Peningkatan signifikan pada semua kelas
+  - ✅ Generalisasi lebih baik
+
+**Kontribusi Gabungan:**
+- Pure CNN: 70.37% → CNN + LoRA + Aug: 81.35%
+- **Peningkatan Total: +10.98% akurasi**
+- Menunjukkan pentingnya kombinasi optimasi untuk model from scratch
+
 ### Posisi Custom CNN + LoRA dalam Ekosistem
 
 **Dibandingkan HOG + SVM (86.27%):**
-- ❌ Akurasi lebih rendah (-4.92%)
+- Pure CNN: -15.90% lebih rendah
+- CNN + LoRA (No Aug): -14.53% lebih rendah
+- CNN + LoRA (With Aug): -4.92% lebih rendah
 - ✅ Tidak perlu feature engineering manual
 - ✅ Model lebih kecil (~1.8 MB vs ~95 MB)
 - ⚖️ Trade-off: simplicity vs accuracy
