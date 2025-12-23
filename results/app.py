@@ -745,7 +745,12 @@ st.markdown("""
 # ==========================================
 CLASSES = {0: "COVID-19", 1: "Non-COVID", 2: "Normal"}
 TARGET_SIZE = (224, 224)
-ARTIFACTS_PATH = "./artifacts"
+
+# Fix path untuk Streamlit Cloud
+import os
+# Get the directory where app.py is located
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+ARTIFACTS_PATH = os.path.join(APP_DIR, "artifacts")
 
 # ==========================================
 # 3. KELAS KUSTOM KERAS (Wajib untuk Load Model)
@@ -966,6 +971,31 @@ def load_histories():
 
 # Header Banner (removed - keeping it minimal)
 
+# Check if artifacts folder exists
+if not os.path.exists(ARTIFACTS_PATH):
+    st.error(f"""
+    🚨 **Artifacts folder not found!**
+    
+    Expected path: `{ARTIFACTS_PATH}`
+    
+    **Solution:**
+    1. Make sure `artifacts/` folder is in your GitHub repository
+    2. The folder should contain all model files (.h5, .pt, .pkl, .joblib)
+    3. Check if the folder is in the same directory as `app.py`
+    
+    **Folder structure should be:**
+    ```
+    results/
+    ├── app.py
+    ├── artifacts/
+    │   ├── *.h5 files
+    │   ├── *.pt files
+    │   └── *.joblib files
+    └── requirements.txt
+    ```
+    """)
+    st.stop()
+
 # Load resources once
 with st.spinner("Loading AI models..."):
     deep_models = load_deep_models()
@@ -1043,7 +1073,7 @@ st.sidebar.markdown("""
 
 st.sidebar.markdown("<hr style='margin: 20px 0; border: none; height: 1px; background: var(--glass-border);'>", unsafe_allow_html=True)
 st.sidebar.markdown("### Navigation")
-app_mode = st.sidebar.radio("", ["🖼️ Detection & Analysis", "📈 Training Metrics"], label_visibility="collapsed")
+app_mode = st.sidebar.radio("Choose Mode", ["🖼️ Detection & Analysis", "📈 Training Metrics"], label_visibility="collapsed")
 
 # --- PAGE 1: DETECTION & ANALYSIS ---
 if app_mode == "🖼️ Detection & Analysis":
