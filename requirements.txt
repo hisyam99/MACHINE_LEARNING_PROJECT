@@ -14,7 +14,7 @@ scikit-learn>=1.8.0
 scikit-image>=0.26.0
 
 # Computer Vision & Image Processing
-opencv-python>=4.10.0.84
+opencv-python-headless>=4.10.0.84
 Pillow>=10.0.0
 
 # Data Science & Visualization
