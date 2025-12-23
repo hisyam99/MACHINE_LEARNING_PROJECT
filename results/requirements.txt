@@ -1,0 +1,31 @@
+# COVID-19 AI Detection Dashboard Requirements
+# ==============================================
+
+# Core Framework
+streamlit>=1.52.2
+
+# Deep Learning Frameworks
+tensorflow>=2.20.0
+torch>=2.9.1
+transformers>=4.57.3
+
+# Machine Learning
+scikit-learn>=1.8.0
+scikit-image>=0.26.0
+
+# Computer Vision & Image Processing
+opencv-python>=4.10.0.84
+Pillow>=10.0.0
+
+# Data Science & Visualization
+numpy>=2.0.0,<2.3.0
+pandas>=2.3.3
+matplotlib>=3.10.8
+seaborn>=0.13.2
+
+# Model Persistence
+joblib>=1.5.3
+
+# Additional Dependencies
+protobuf>=6.33.2
+
