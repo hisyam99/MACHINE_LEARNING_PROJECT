@@ -10,6 +10,27 @@ Komparasi Machine Learning Klasik dan Deep Learning dengan LoRA
 <a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-2.10+-orange.svg" alt="TensorFlow" style="margin: 0 4px;"></a>
 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-green.svg" alt="License" style="margin: 0 4px;"></a>
 
+<div style="margin: 2rem 0;">
+    <a href="https://covid-19-ai-hisyam.streamlit.app/" target="_blank" style="
+        display: inline-block;
+        padding: 16px 32px;
+        background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 20px rgba(10, 132, 255, 0.3);
+        transition: all 0.3s ease;
+    " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 30px rgba(10, 132, 255, 0.5)';" 
+       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(10, 132, 255, 0.3)';">
+        🚀 Try Live Dashboard
+    </a>
+    <p style="margin-top: 12px; font-size: 0.9em; color: #6e6e73;">
+        Interactive AI-powered COVID-19 detection system
+    </p>
+</div>
+
 </div>
 
 ---

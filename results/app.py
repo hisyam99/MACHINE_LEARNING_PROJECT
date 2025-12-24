@@ -865,6 +865,34 @@ st.sidebar.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+# Documentation link button
+st.sidebar.markdown("""
+    <a href="https://hisyam99.github.io/MACHINE_LEARNING_PROJECT" target="_blank" style="text-decoration: none;">
+        <div style="
+            margin: 16px 12px;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(10, 132, 255, 0.3);
+        " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(10, 132, 255, 0.4)';" 
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(10, 132, 255, 0.3)';">
+            <div style="
+                color: white;
+                font-size: 0.95rem;
+                font-weight: 600;
+                margin-bottom: 4px;
+            ">📚 Documentation</div>
+            <div style="
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.75rem;
+            ">View complete project docs</div>
+        </div>
+    </a>
+""", unsafe_allow_html=True)
+
 st.sidebar.markdown("<hr style='margin: 20px 0; border: none; height: 1px; background: var(--glass-border);'>", unsafe_allow_html=True)
 st.sidebar.markdown("### Navigation")
 app_mode = st.sidebar.radio("Choose Mode", ["🖼️ Single Detection", "📦 Batch Detection", "📊 EDA & Visualization", "📈 Training Metrics"], label_visibility="collapsed")
